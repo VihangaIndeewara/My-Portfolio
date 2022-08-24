@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case One</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        main{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        main>section:first-child{
+            width: 50%;
+            height: 50%;
+            -webkit-border-top-left-radius: 10px;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        main>section:nth-child(2){
+            width: 50%;
+            height: 50%;
+            background-color: green;
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+        main>section:nth-child(3){
+            width: 50%;
+            height: 50%;
+            background-color: darkorange;
+            position: absolute;
+            bottom:0;
+            left: 0;
+        }
+        main>section:nth-child(4){
+            width: 50%;
+            height: 50%;
+            background-color: deeppink;
+            position: absolute;
+            bottom:0;
+            right: 0;
+        }
+
+        main>section:first-child>div{
+            width: 25%;
+            height: 50%;
+            border-radius:  100%;
+            background-color: white;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(2)>div{
+            width: 25%;
+            height: 50%;
+            border-radius:  100%;
+            background-color: white;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(3)>div{
+            width: 25%;
+            height: 50%;
+            border-radius:  100%;
+            background-color: white;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(4)>div{
+            width: 25%;
+            height: 50%;
+            border-radius:  100%;
+            background-color: white;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:first-child>div>div{
+            width: 30%;
+            height: 30%;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(2)>div>div{
+            width: 30%;
+            height: 30%;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(3)>div>div{
+            width: 30%;
+            height: 30%;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(4)>div>div{
+            width: 30%;
+            height: 30%;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(5){
+            width: 15%;
+            height: 30%;
+            background-color: white;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(5)>div{
+            width: 50%;
+            height: 50%;
+            border-radius: 100%;
+            background-color: red;
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        main>section:nth-child(6)>div:first-child{
+            width: 200px;
+            height: 200px;
+            border-bottom-right-radius: 100%;
+            background-color: white;
+            position: absolute;
+        }
+        main>section:nth-child(6)>div:nth-child(2){
+            width: 200px;
+            height: 200px;
+            right: 0;
+            top:0;
+            border-bottom-left-radius: 100%;
+            background-color: white;
+            position: absolute;
+        }
+        main>section:nth-child(6)>div:nth-child(3){
+            width: 200px;
+            height: 200px;
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: 100%;
+            background-color: white;
+            position: absolute;
+        }
+        main>section:nth-child(6)>div:nth-child(4){
+            width: 200px;
+            height: 200px;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 100%;
+            background-color: white;
+            position: absolute;
+        }
+        main>section:nth-child(6)>div:nth-child(5){
+            width: 180px;
+            height: 90px;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            background-color: white;
+            position: absolute;
+        }
+        main>section:nth-child(6)>div:nth-child(6){
+            width: 180px;
+            height: 90px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            background-color: white;
+            position: absolute;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <main>
+<!--        Red Box-->
+        <section>
+            <div>
+                <div></div>
+            </div>
+        </section>
+
+<!--        Green Box-->
+        <section>
+            <div>
+                <div></div>
+            </div>
+        </section>
+
+<!--        Orange Box-->
+        <section>
+            <div>
+                <div></div>
+            </div>
+        </section>
+
+<!--        Pink Box-->
+        <section>
+            <div>
+                <div></div>
+            </div>
+        </section>
+
+        <!--Center Box-->
+        <section>
+            <div></div>
+        </section>
+
+<!--        edges circle-->
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+
+
+    </main>
+
+
+</body>
+</html>
