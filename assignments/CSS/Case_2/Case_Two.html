@@ -12,26 +12,55 @@
 
 
         header{
-            border:2px solid black;
-            height: 50px;
+            bottm-border:2px solid black;
+            height: 100px;
             position: relative;
+            box-shadow: 0px 3px 5px 2px black;
         }
 
         header>img{
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 40px;
+            left: 30px;
         }
 
         header>nav{
+            top: 30px;
             position: absolute;
             right: 0;
         }
 
         header>nav>li{
             display: inline-block;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
             margin: 10px;
             right: 0;
+        }
+
+        main>section:first-child{
+            background-color: purple;
+            width: 300px;
+            height: 100vh;
+            position: relative;
+        }
+
+        main>section:first-child>ul{
+            margin: 0;
+        }
+
+        main>section:first-child>ul>li{
+            position: relative;
+            display: block;
+            font-size: 25px;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            top: 100px;
+            left: 10px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
 
