@@ -11,9 +11,56 @@
             height: 100vh;
             position: relative;
         }
+        
+        main>section{
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
 
+        body>main>section:first-child>div:first-child{
+            width: 380px;
+            height: 380px;
+            border-radius: 100%;
+            background-color: gray;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
 
-        body>main>section:first-child{
+        body>main>section:first-child>div:nth-child(2){
+            width: 340px;
+            height: 340px;
+            border-radius: 100%;
+            background-color: red;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        body>main>section:first-child>div:nth-child(3){
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        body>main>section{
             background-color: purple;
             border-radius: 100%;
             width: 250px;
@@ -26,7 +73,7 @@
             margin: auto;
         }
 
-        body>main>section:first-child>h3{
+        body>main>section>h3{
             color: white;
             width: 70px;
             height: 40px;
@@ -46,10 +93,15 @@
 <body>
     <main>
         <section>
-            <h3>Hello</h3>
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
-        <section></section>
-        <section></section>
     </main>
+
+    <section>
+          <h3>Hello</h3>
+    </section>
+
 </body>
 </html>
