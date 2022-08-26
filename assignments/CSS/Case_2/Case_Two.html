@@ -20,8 +20,8 @@
 
         header>img{
             position: absolute;
-            top: 40px;
-            left: 30px;
+            top: 30px;
+            left: 70px;
         }
 
         header>nav{
@@ -64,11 +64,38 @@
             cursor: pointer;
         }
 
+        main>section:nth-child(2)>div:first-child>img{
+            border: 1px solid black;
+            display: inline-block;
+            left: 450px;
+            position: relative;
+            bottom: 1000px;
+        }
+
         main>section:nth-child(2)>div:nth-child(2){
             position: absolute;
-            top: 200px;
+            top: 800px;
             left: 500px;
             font-size:30px;
+        }
+
+        footer{
+            border: 2px solid black;
+            height: 50px;
+            background-color: gray;
+            position: relative;
+        }
+
+       body> footer>h4{
+            color: white;
+            height: 20px;
+            width: 200px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
         }
 
 
@@ -78,7 +105,7 @@
 </head>
 <body>
 <header>
-    <img src="assets/images/ijse.png"  alt="ijse logo">
+    <img src="images/ijse.png"  alt="ijse logo">
     <nav>
         <li>Home</li>
         <li>Services</li>
@@ -97,9 +124,9 @@
     </section>
     <section>
         <div>
-            <img src="assets/images/mobile app-gif.gif" alt="mobile.gif">
-            <img src="assets/images/mobile app-gif.gif" alt="mobile.gif">
-            <img src="assets/images/mobile app-gif.gif" alt="mobile.gif">
+            <img src="images/mobile%20app-gif.gif" alt="mobile.gif">
+            <img src="images/mobile%20app-gif.gif" alt="mobile.gif">
+            <img src="images/mobile%20app-gif.gif" alt="mobile.gif">
         </div>
         <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, doloribus expedita laudantium placeat sint sit
@@ -138,7 +165,7 @@
     </section>
 </main>
 <footer>
-    <small>Developed by ijse</small>
+    <h4>Developed by ijse</h4>
 </footer>
 
 </body>
