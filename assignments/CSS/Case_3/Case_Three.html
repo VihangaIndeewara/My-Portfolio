@@ -60,11 +60,11 @@
             margin: auto;
         }
 
-        body>main>section{
+        body>main>section:nth-child(2)>div{
             background-color: purple;
             border-radius: 100%;
-            width: 250px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
             position: absolute;
             top: 0;
             left: 0;
@@ -73,8 +73,8 @@
             margin: auto;
         }
 
-        body>main>section>h3{
-            color: white;
+        body>main>section:nth-child(2)>h3{
+            color: black;
             width: 70px;
             height: 40px;
             font-size: 30px;
@@ -85,6 +85,51 @@
             right: 0;
             bottom: 0;
             margin: auto;
+        }
+        body>main>section:nth-child(3)>div{
+            display: inline-block;
+            background-color: #1A98BD;
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            top: 2000px;
+            left: 990px
+
+        }
+
+        body>main>section:nth-child(3)>h3{
+            color: white;
+            width: 210px;
+            height: 40px;
+            font-size: 40px;
+            font-weight: bold;
+            position: absolute;
+            top: 2100px;
+            left: 1040px
+        }
+
+        body>main>section:nth-child(4)>div{
+            display: inline-block;
+            background-color: indianred;
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            top: 3000px;
+            left: 1000px
+
+        }
+
+        body>main>section:nth-child(4)>h3{
+            color: black;
+            width: 180px;
+            height: 40px;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 3100px;
+            left: 1050px
         }
 
     </style>
@@ -97,11 +142,21 @@
             <div></div>
             <div></div>
         </section>
+        <section>
+            <div></div>
+            <h3>Hello</h3>
+        </section>
+        <section>
+            <div></div>
+            <h3>Welcome To</h3>
+        </section>
+        <section>
+            <div></div>
+            <h3>Institute of Software Engineering</h3>
+        </section>
     </main>
 
-    <section>
-          <h3>Hello</h3>
-    </section>
+
 
 </body>
 </html>
