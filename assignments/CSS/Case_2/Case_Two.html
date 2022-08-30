@@ -11,8 +11,12 @@
 
         header{
             border-bottom:2px solid black;
+            background: white;
             height: 100px;
-            position: relative;
+            width: 100%;
+            top: 0;
+            position: fixed;
+            z-index: 1;
             box-shadow: 0px 3px 5px 2px black;
         }
 
@@ -57,6 +61,7 @@
 
         main{
             position: relative;
+            margin-top: 100px;
         }
 
         main>section:first-child{
@@ -103,12 +108,20 @@
 
 
 
-        main>section:nth-child(2)>div:first-child>img{
+        main>section:nth-child(2)>div:first-child{
             border: 1px solid black;
-            display: inline-block;
-            left: 450px;
             position: relative;
-            top: 30px;
+            height: 600px;
+            top: 20px;
+            margin-left: 450px;
+        }
+
+        main>section:nth-child(2)>div:first-child>img:first-child{
+            border-right: 1px solid black;
+        }
+
+        main>section:nth-child(2)>div:first-child>img:nth-child(2){
+            border-right: 1px solid black;
         }
 
         main>section:nth-child(2)>div:nth-child(2){
@@ -164,7 +177,7 @@
             <img src="assets/images/mobile%20app-gif.gif" alt="mobile.gif">
             <img src="assets/images/mobile%20app-gif.gif" alt="mobile.gif">
             <img src="assets/images/mobile%20app-gif.gif" alt="mobile.gif">
-        </div>
+       </div>
         <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, doloribus expedita laudantium placeat sint sit
                 suscipit! Doloribus necessitatibus placeat quidem repudiandae velit? Accusamus aspernatur eius itaque laborum
