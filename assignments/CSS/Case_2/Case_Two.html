@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <title>Case Two</title>
     <meta name="viewport" content="width=device-width initial-scale=2">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
 
     <style>
-        body{
-            margin: 0;
-        }
-
 
         header{
-            bottm-border:2px solid black;
+            border-bottom:2px solid black;
             height: 100px;
             position: relative;
             box-shadow: 0px 3px 5px 2px black;
@@ -40,6 +38,23 @@
             right: 30px;
         }
 
+       header>nav>li>i{
+            padding-right: 15px;
+        }
+        header>nav>li>a{
+            color: black;
+            text-decoration: none;
+        }
+
+        header>nav>li:hover a{
+            color: darkorange;
+        }
+
+        header>nav>li:hover i{
+            color: darkorange;
+        }
+
+
         main{
             position: relative;
         }
@@ -58,7 +73,7 @@
 
         main>section:first-child>ul>li{
             position: relative;
-            display: block;
+            list-style: none;
             font-size: 25px;
             color: white;
             margin: 0;
@@ -68,6 +83,25 @@
             font-weight: bold;
             cursor: pointer;
         }
+
+        main>section:first-child>ul>li:hover a{
+            color: #1A98BD;
+        }
+
+        main>section:first-child>ul>li:hover i{
+            color: #1A98BD;
+        }
+
+        main>section:first-child>ul>li>i{
+            padding-right: 15px;
+        }
+
+        main>section:first-child>ul>li>a{
+           color: white;
+            text-decoration: none;
+        }
+
+
 
         main>section:nth-child(2)>div:first-child>img{
             border: 1px solid black;
@@ -108,28 +142,28 @@
 </head>
 <body>
 <header>
-    <img src="images/ijse.png"  alt="ijse logo">
+    <img src="assets/images/ijse.png" alt="ijse logo">
     <nav>
-        <li>Home</li>
-        <li>Services</li>
-        <li>Contacts</li>
-        <li>About Us</li>
+            <li><i class="fa-solid fa-house"></i> <a href="https://ijse.lk">Home</a></li>
+            <li><i class="fa-solid fa-earth-americas"></i>    <a href="#">Services</a></li>
+            <li><i class="fa-solid fa-phone"></i>    <a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i>    <a href="#">About Us</a></li>
     </nav>
 </header>
 <main>
     <section>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contacts</li>
-            <li>About Us</li>
+            <li><i class="fa-solid fa-house"></i> <a href="https://ijse.lk">Home</a></li>
+            <li><i class="fa-solid fa-earth-americas"></i>    <a href="#">Services</a></li>
+            <li><i class="fa-solid fa-phone"></i>    <a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i>    <a href="#">About Us</a></li>
         </ul>
     </section>
     <section>
         <div>
-            <img src="images/mobile%20app-gif.gif" alt="mobile.gif">
-            <img src="images/mobile%20app-gif.gif" alt="mobile.gif">
-            <img src="images/mobile%20app-gif.gif" alt="mobile.gif">
+            <img src="assets/images/mobile%20app-gif.gif" alt="mobile.gif">
+            <img src="assets/images/mobile%20app-gif.gif" alt="mobile.gif">
+            <img src="assets/images/mobile%20app-gif.gif" alt="mobile.gif">
         </div>
         <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, doloribus expedita laudantium placeat sint sit
