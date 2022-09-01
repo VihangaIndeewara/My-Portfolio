@@ -572,6 +572,50 @@
             font-family: 'Ubuntu', sans-serif;
         }
 
+        main > section:nth-child(6) {
+            position: relative;
+            width: 100%;
+            height: 1300px;
+            top: 60px;
+            background: #F0F0F0;
+        }
+
+        main > section:nth-child(6) > section{
+            position: absolute;
+            top: 80px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 2100px;
+            height: 900px;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 90px;
+
+        }
+
+        main > section:nth-child(6) >section>figure>img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 500px;
+            height: 400px;
+        }
+
+        main > section:nth-child(6) >section>figure:nth-child(2)>img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 700px;
+            height: 600px;
+        }
+
 
     </style>
 
@@ -637,7 +681,7 @@
         </aside>
     </section>
     <section>
-        <h1 class="topic"><b>Education</b></h1>
+        <dt><h1 class="topic"><b>Education</b></h1></dt>
         <aside>
             <figure>
                 <img src="assets/images/ijse.png" alt="ijse logo">
@@ -682,7 +726,7 @@
         </aside>
     </section>
     <section>
-        <h1 class="topic"><b>Skills</b></h1>
+        <dt><h1 class="topic"><b>Skills</b></h1></dt>
         <aside>
             <figure>
                 <img src="assets/images/java.png" alt="java logp">
@@ -727,7 +771,7 @@
         </aside>
     </section>
     <section>
-        <h1 class="topic"><b>Services</b></h1>
+       <dt> <h1 class="topic"><b>Services</b></h1></dt>
         <section>
             <div>
                 <div>
@@ -747,25 +791,21 @@
         </section>
     </section>
     <section>
-        <h1><b>Projects</b></h1>
-        <aside>
-            <figure>
-                <img src="" alt="">
-                <figcaption></figcaption>
-            </figure>
-        </aside>
-        <aside>
-            <figure>
-                <img src="" alt="">
-                <figcaption></figcaption>
-            </figure>
-        </aside>
-        <aside>
-            <figure>
-                <img src="" alt="">
-                <figcaption></figcaption>
-            </figure>
-        </aside>
+        <dt><h1 class="topic"><b>Projects</b></h1></dt>
+       <section>
+               <figure>
+                   <img src="assets/images/SuperMeatShop.png" alt="SuperMeatShop Interface">
+                   <figcaption>Super Meat Shop</figcaption>
+               </figure>
+               <figure>
+                   <img src="assets/images/SuperMarket.png" alt="SuperMarket Interface">
+                   <figcaption>Super Meat Shop</figcaption>
+               </figure>
+           <figure>
+               <img src="assets/images/Hostel.png" alt="Hostel Interface">
+               <figcaption>Super Meat Shop</figcaption>
+           </figure>
+       </section>
         <aside>
             <img src="" alt="">
             <img src="" alt="">
