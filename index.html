@@ -749,6 +749,22 @@
             top:70px
         }
 
+        main > section:nth-child(7) >section:last-child>div{
+            position: relative;
+            left: 800px;
+        }
+
+        main > section:nth-child(7) >section:last-child>div>input{
+            width: 800px;
+            height: 40px;
+            text-align: left;
+        }
+
+        main > section:nth-child(7) >section:last-child>div>label{
+            position: relative;
+            left: 60px;
+        }
+
         footer{
             background:#CDCDCD ;
             height: 60px;
@@ -774,6 +790,7 @@
             left: 225px;
             cursor: pointer;
         }
+
 
     </style>
 
@@ -1001,7 +1018,22 @@
             </aside>
         </section>
         <section>
-
+            <div>
+                <label for="txtFrom">From</label>
+                <input type="text" id="txtFrom" name="from">
+            </div>
+            <div>
+                <label for="txtTo">To</label>
+                <input type="text" id="txtTo" name="to">
+            </div>
+            <div>
+                <label for="txtSubject">Subject</label>
+                <input type="text" id="txtSubject" name="subject">
+            </div>
+            <div>
+                <label for="txtMessage">Message</label>
+                <input type="text" id="txtMessage" name="message">
+            </div>
         </section>
     </section>
 </main>
