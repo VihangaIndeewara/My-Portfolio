@@ -790,7 +790,7 @@
             width: 800px;
             height: 40px;
             position: relative;
-            font-size: 20px;
+            font-size: 25px;
             background: #D9D9D9;
             border-radius: 8px;
             border: none;
@@ -832,6 +832,21 @@
             right: 30px;
         }
 
+        main>section:nth-child(7)>section>form>button{
+            position: relative;
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            background:#0D99F0 ;
+            border-radius: 8px;
+            border: none;
+            font-size: 18px;
+            box-shadow: 0px 1px 4px 0px #0D99F0;
+            top: 20px;
+            left: 66px;
+        }
+
 
     </style>
 
@@ -839,17 +854,17 @@
 <body>
 <header>
     <nav>
-        <li>Home</li>
-        <li>About</li>
-        <li>Education</li>
-        <li>Skills</li>
-        <li>Services</li>
-        <li>Projects</li>
-        <li>Contacts</li>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Skill">Skills</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contacts">Contacts</a></li>
     </nav>
 </header>
 <main>
-    <section>
+    <section id="Home">
         <article>
             <h2>Hi, there</h2>
             <h3>I'm Vihanga Indeewara</h3>
@@ -863,7 +878,7 @@
             <img src="assets/images/Vihanga.jpg" alt="My Image">
         </aside>
     </section>
-    <section>
+    <section id="About">
         <dt><h1 class="topic"><b>About Me</b></h1></dt>
 
         <article>
@@ -896,7 +911,7 @@
 
         </aside>
     </section>
-    <section>
+    <section id="Education">
         <dt><h1 class="topic"><b>Education</b></h1></dt>
         <aside>
             <figure>
@@ -941,7 +956,7 @@
             </figure>
         </aside>
     </section>
-    <section>
+    <section id="Skill">
         <dt><h1 class="topic"><b>Skills</b></h1></dt>
         <aside>
             <figure>
@@ -986,7 +1001,7 @@
             </figure>
         </aside>
     </section>
-    <section>
+    <section id="Services">
        <dt> <h1 class="topic"><b>Services</b></h1></dt>
         <section>
             <div>
@@ -1006,7 +1021,7 @@
             </div>
         </section>
     </section>
-    <section>
+    <section id="Projects">
         <dt><h1 class="topic"><b>Projects</b></h1></dt>
        <section>
                <figure>
@@ -1034,7 +1049,7 @@
             <img src="assets/images/arrow_back%20(2).png" alt="arrow later">
         </aside>
     </section>
-    <section>
+    <section id="Contacts">
         <dt><h1 class="topic"><b>Contacts</b></h1></dt>
         <section>
             <aside>
@@ -1079,6 +1094,8 @@
                     <input type="text" id="txtMessage" name="message">
                     <br>
                     <br>
+
+                    <button type="submit">Send Message</button>
 
             </form>
         </section>
