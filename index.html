@@ -74,7 +74,12 @@
 
         }
 
-        header>nav>li:hover{
+        header > nav > li >a{
+            text-decoration: none;
+            color: black;
+        }
+
+        header>nav>li:hover >a{
             color: #1A98BD;
         }
 
@@ -124,7 +129,7 @@
             font-family: 'Ubuntu', sans-serif;
         }
 
-        main > section:first-child > article > nav > img:first-child {
+        main > section:first-child > article > nav >a:first-child > img {
             position: absolute;
             width: 50px;
             height: 50px;
@@ -132,7 +137,7 @@
             left: 300px;
         }
 
-        main > section:first-child > article > nav > img:nth-child(2) {
+        main > section:first-child > article > nav > a:nth-child(2) >img {
             position: absolute;
             width: 50px;
             height: 50px;
@@ -161,7 +166,7 @@
         .topic {
             position: absolute;
             display: inline-block;
-            top: 30px;
+            top: 100px;
             left: 0;
             right: 0;
             font-size: 50px;
@@ -870,8 +875,8 @@
             <h3>I'm Vihanga Indeewara</h3>
             <h6 style=color:#8e8c8c>Full Stack Developer</h6>
             <nav>
-                <img src="assets/images/linkedin.png" alt="Linkedin Image">
-                <img src="assets/images/github.png" alt="Github Image">
+                <a href="https://www.linkedin.com/in/vihanga-indeewara-89a497244/"><img src="assets/images/linkedin.png" alt="Linkedin Image"></a>
+                <a href="https://github.com/VihangaIndeewara"><img src="assets/images/github.png" alt="Github Image"></a>
             </nav>
         </article>
         <aside>
