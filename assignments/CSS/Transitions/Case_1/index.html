@@ -8,7 +8,7 @@
 
     <style>
         main>div{
-            width: 350px;
+            width: 650px;
             height: 100px;
             background-color: purple;
             margin-bottom:100px ;
@@ -17,21 +17,30 @@
             position: relative;
             font-size: 35px;
             top: 100px;
-            right: 265px;
+            right: 470px;
             transition-property: all;
             transition-duration:3s;
         }
 
         main>div>i{
             position: relative;
-            left: 60px;
+            bottom: 40px;
+            left: 250px;
             margin-right:70px ;
             margin-top: 25px;
         }
 
+        main>div>h3{
+            position: relative;
+            text-align: center;
+            top: 25px;
+            margin: 0;
+            left: 20px;
+        }
+
         main>div:hover{
-            width: 700px;
-            background-color: #cb46b7;
+            width: 1100px;
+            background-color: #cb468f;
             transition-property: width,background-color;
             transition-duration:3s;
         }
@@ -44,24 +53,24 @@
 <body>
     <main>
         <div>
+            <h3>Menu One</h3>
             <i class="fa-solid fa-address-book"></i>
-            Menu One
         </div>
         <div>
+          <h3> Menu Two</h3>
             <i class="fa-solid fa-truck-medical"></i>
-           Menu Two
         </div>
         <div>
+            <h3>Menu Three</h3>
             <i class="fa-solid fa-book"></i>
-            Menu Three
         </div>
         <div>
+             <h3>Menu Four</h3>
             <i class="fa-solid fa-layer-group"></i>
-          Menu Four
         </div>
         <div>
+            <h3>Menu Five</h3>
             <i class="fa-solid fa-cart-arrow-down"></i>
-            Menu Five
         </div>
     </main>
 </body>
