@@ -22,7 +22,8 @@
             right: 0;
             bottom:0;
             margin: auto;
-            border: 15px solid white;
+            border: 20px solid white;
+            border-top: 20px solid orangered;
         }
 
         section>div>h1{
@@ -40,8 +41,16 @@
 
         section>div:hover{
             cursor: pointer;
-            border-color: orangered;
+            transform: rotate(360deg);
+            transition-property: all;
+            transition-duration: 3s;
 
+        }
+
+        section>div:hover>h1{
+            transform: rotate(-360deg);
+            transition-property: all;
+            transition-duration: 3s;
         }
 
     </style>
