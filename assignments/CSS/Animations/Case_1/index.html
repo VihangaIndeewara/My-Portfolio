@@ -16,8 +16,28 @@
             height: 100px;
             border-radius: 25px;
             background-color: green;
+            animation-name: my-animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
         }
 
+        @keyframes my-animation {
+            0%{
+                background-color: #040080;
+            }
+            25%{
+                background-color: #cda61c;
+            }
+            50%{
+                background-color: #c719c5;
+            }
+            75%{
+                background-color: #ea6a14;
+            }
+            100%{
+                background-color: #7A332A;
+            }
+        }
 
     </style>
 
