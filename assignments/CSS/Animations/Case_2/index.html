@@ -6,9 +6,9 @@
 
     <style>
         div{
-            width: 250px;
-            height: 250px;
-            border: 1px solid #8e8c8c;
+            width: 75px;
+            height: 75px;
+            border: 2px solid #8e8c8c;
             border-radius: 100%;
             position: absolute;
             top: 0;
@@ -16,6 +16,23 @@
             left: 0;
             right: 0;
             margin: auto;
+            animation-name: my-animation;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes my-animation {
+            0%{
+                width: 75px;
+                height: 75px;
+            }
+            100%{
+                width: 350px;
+                height: 350px;
+            }
+
+
         }
 
     </style>
