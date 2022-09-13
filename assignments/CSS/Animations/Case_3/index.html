@@ -14,7 +14,25 @@
       bottom: 0;
       margin: auto;
       border: 1px solid  #8e8c8c;
+        box-shadow: 0px 0px 7px 1px;
     }
+
+
+    section>div>img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      animation-name: my-animation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate-reverse;
+    }
+
+    @keyframes my-animation {
+
+    }
+
   </style>
 </head>
 
@@ -22,7 +40,7 @@
 <body>
 <section>
   <div>
-    <img src="assets/images/landscape.png" alt="landscape">
+    <img src="assets/images/tree2.jpg" alt="tree2">
   </div>
   <div>
     <img src="assets/images/nature.png" alt="nature">
@@ -31,7 +49,10 @@
     <img src="assets/images/tree.jpg" alt="tree">
   </div>
   <div>
-    <img src="assets/images/winter.jpg" alt="winter">
+    <img src="assets/images/park.jpg" alt="park">
+  </div>
+  <div>
+    <img src="assets/images/river.jpg" alt="river">
   </div>
 </section>
 </body>
