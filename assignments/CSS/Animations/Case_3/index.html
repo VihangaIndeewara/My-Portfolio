@@ -13,19 +13,23 @@
       right: 0;
       bottom: 0;
       margin: auto;
-      border: 1px solid  #8e8c8c;
       box-shadow: 0px 0px 7px 1px;
+      overflow: hidden;
     }
 
     main>section{
       height: 100%;
       width: 500%;
-      border: 1px solid red;
       display: flex;
+      animation-name: my-animation;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      animation-delay: 2s;
     }
 
     main>section>div{
-      border: 2px solid yellow;
       height: 100%;
       width: 100%;
     }
@@ -34,21 +38,26 @@
     main>section>div>img{
       width: 100%;
       height: 100%;
-      position: absolute;
-      animation-name: my-animation;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      animation-direction: alternate-reverse;
+
     }
 
     @keyframes my-animation {
       0%{
-
+        transform: translateX(0px);
+      }
+      25%{
+        transform: translateX(-1300px);
+      }
+      50%{
+        transform: translateX(-2600px);
+      }
+      75%{
+        transform: translateX(-3900px);
       }
       100%{
-
+        transform: translateX(-5200px);
       }
+
     }
 
   </style>
@@ -58,19 +67,19 @@
 <body>
 <main>
   <section>
-    <div>
+    <div class="one">
       <img src="assets/images/tree2.jpg" alt="tree2">
     </div>
-    <div>
+    <div id="two">
       <img src="assets/images/nature.png" alt="nature">
     </div>
-    <div>
+    <div class="three">
       <img src="assets/images/tree.jpg" alt="tree">
     </div>
-    <div>
+    <div id="four">
       <img src="assets/images/park.jpg" alt="park">
     </div>
-    <div>
+    <div id="five">
       <img src="assets/images/river.jpg" alt="river">
     </div>
   </section>
