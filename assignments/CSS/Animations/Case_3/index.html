@@ -22,11 +22,10 @@
       width: 500%;
       display: flex;
       animation-name: my-animation;
-      animation-duration: 15s;
+      animation-duration: 20s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
       animation-direction: alternate;
-      animation-delay: 2s;
     }
 
     main>section>div{
@@ -42,19 +41,19 @@
     }
 
     @keyframes my-animation {
-      0%{
+      0%, 14%{
         transform: translateX(0px);
       }
-      25%{
+      23%, 37%{
         transform: translateX(-1300px);
       }
-      50%{
+      45%, 58% {
         transform: translateX(-2600px);
       }
-      75%{
+      67%, 80%{
         transform: translateX(-3900px);
       }
-      100%{
+      89%, 100%{
         transform: translateX(-5200px);
       }
 
