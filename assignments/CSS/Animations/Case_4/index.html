@@ -17,6 +17,7 @@
             background-image: url("assets/img/sky.jpg");
             background-position: center;
             background-size: cover;
+            /*overflow: hidden;*/
         }
         section>div:nth-child(1)>img{
             width:100%;
@@ -30,15 +31,45 @@
             bottom: 0;
         }
 
-        main>div>img{
-            width: 580px;
-            height: 330px;
+        section>div:nth-child(3)>img{
+            width: 732px;
+            height: 309px;
             position: absolute;
-            top: 455px;
+            top: 490px;
             left: 0;
             right: 0;
             margin: auto;
 
+        }
+
+        section>div:nth-child(4)>img{
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            top: 645px;
+            left: 794px;
+
+        }
+        section>div:nth-child(5)>img{
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            top: 645px;
+            left: 1242px;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes my-animation {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
         }
 
     </style>
@@ -52,10 +83,17 @@
         <div>
             <img src="assets/img/road.jpg" alt="road.png">
         </div>
+        <div>
+            <img src="assets/img/car.png" alt="car.png">
+        </div>
+        <div>
+            <img src="assets/img/wheel.png" alt="car.png">
+        </div>
+        <div>
+            <img src="assets/img/wheel.png" alt="car.png">
+        </div>
     </section>
-    <div>
-        <img src="assets/img/car.png" alt="car.png">
-    </div>
+
 </main>
 </body>
 </html>
