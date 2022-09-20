@@ -18,15 +18,44 @@
             background-position: center;
             background-size: cover;
         }
+        section>div:nth-child(1)>img{
+            width:100%;
+            position: absolute;
+            bottom: 300px;
+        }
+
+        section>div:nth-child(2)>img{
+            width: max-content;
+            position: absolute;
+            bottom: 0;
+        }
+
+        main>div>img{
+            width: 580px;
+            height: 330px;
+            position: absolute;
+            top: 455px;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+        }
+
     </style>
 </head>
 <body>
 <main>
     <section>
         <div>
-
+            <img src="assets/img/city.png" alt="city.png">
+        </div>
+        <div>
+            <img src="assets/img/road.jpg" alt="road.png">
         </div>
     </section>
+    <div>
+        <img src="assets/img/car.png" alt="car.png">
+    </div>
 </main>
 </body>
 </html>
