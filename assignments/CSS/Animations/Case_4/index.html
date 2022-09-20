@@ -17,12 +17,28 @@
             background-image: url("assets/img/sky.jpg");
             background-position: center;
             background-size: cover;
-            /*overflow: hidden;*/
+            overflow: hidden;
         }
-        section>div:nth-child(1)>img{
-            width:100%;
+        section>div:nth-child(1){
+            width: 300%;
             position: absolute;
-            bottom: 300px;
+            bottom: 295px;
+            display: flex;
+            animation-name: city;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        section>div:nth-child(1)>div>img{
+            /*width:100%;*/
+            /*position: absolute;*/
+            /*bottom: 300px;*/
+            /*display: flex;*/
+            /*animation-name: city;*/
+            /*animation-duration: 10s;*/
+            /*animation-iteration-count: infinite;*/
+            /*animation-fill-mode: forwards;*/
         }
 
         section>div:nth-child(2)>img{
@@ -48,6 +64,10 @@
             position: absolute;
             top: 645px;
             left: 794px;
+            animation-name: my-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
 
         }
         section>div:nth-child(5)>img{
@@ -72,13 +92,25 @@
             }
         }
 
+        @keyframes city {
+            0%{
+                transform: translateX(0px);
+            }100%{
+                transform: translateX(-2000px);
+            }
+        }
+
     </style>
 </head>
 <body>
 <main>
     <section>
         <div>
-            <img src="assets/img/city.png" alt="city.png">
+            <div>
+                <img src="assets/img/city.png" alt="city.png">
+                <img src="assets/img/city.png" alt="city.png">
+                <img src="assets/img/city.png" alt="city.png">
+            </div>
         </div>
         <div>
             <img src="assets/img/road.jpg" alt="road.png">
