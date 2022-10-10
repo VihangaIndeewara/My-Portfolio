@@ -9,12 +9,10 @@
     <style>
             #logout{
                 margin-left: 300px;
-                font-weight: bold;
             }
 
             .navbar-nav{
                 margin-left: 1200px;
-                font-size: 20px;
             }
             .nav-item{
                 padding-left: 30px;
@@ -36,7 +34,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" >
+                <ul class="navbar-nav fs-5" >
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -52,12 +50,70 @@
                 </ul>
 
 
-                <button id="logout" type="button" class="btn btn-outline-danger">Log Out</button>
+                <button id="logout" type="button" class="btn btn-outline-danger fw-bold">Log Out</button>
             </div>
         </div>
     </nav>
 </header>
-<main></main>
+<main>
+<!--    Home Content-->
+
+    <div class="jumbotron pt-md-5">
+        <div id="home-tiles">
+            <div class="row ">
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-success font-weight-bolder"><h3>Customers</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon">
+                                <img src="assets/images/customer.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>150</h2></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-warning font-weight-bolder"><h3>Items</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon">
+                                <img src="assets/images/item.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2>350</h2></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-info font-weight-bolder"><h3>Place Order</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon">
+                                <img src="assets/images/order.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-lg-end text-black"><h2></h2></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3 mb-2">
+                    <div class="card">
+                        <div class="card-header bg-danger font-weight-bolder"><h3>All Order details</h3></div>
+                        <div class="card-body">
+                            <div class="dash-tile-icon" style="">
+                                <img src="assets/images/all_Orders.jpg" width="200" height="200">
+                            </div>
+                            <div class="dash-tile-text text-center text-black"><h2>420</h2></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br> <br> <br>
+        <div class="text-xxl-center">
+            <button class="btn btn-success">Add New Order</button>
+        </div>
+    </div>
+
+</main>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
