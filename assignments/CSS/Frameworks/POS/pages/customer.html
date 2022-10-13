@@ -69,28 +69,28 @@
         <button type="button" class="btn btn-outline-success col-1 "style="width: 120px; height: 50px; margin-left: 1850px " data-bs-toggle="modal" data-bs-target="#saveModal" ><h3 class="fs-3">+ New</h3></button>
 
 <!--         save modal-->
-        <div class="modal fade" id="saveModal" tabindex="-1"  aria-hidden="true">
+        <div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="saveModal"  aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-success">
-                        <h5 class="modal-title" id="exampleModalLabel1">New Customer</h5>
+                        <h5 class="modal-title" id="saveModalTitle">New Customer</h5>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="formGroupExampleInput1" class="form-label">Customer ID</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Ex:- C001">
+                            <label for="saveModalInput1" class="form-label">Customer ID</label>
+                            <input type="text" class="form-control" id="saveModalInput1" placeholder="Ex:- C001">
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ex:- Kamal Perera">
+                            <label for="saveModalInput2" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="saveModalInput2" placeholder="Ex:- Kamal Perera">
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput3" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Ex:- Dehiwala">
+                            <label for="saveModalInput3" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="saveModalInput3" placeholder="Ex:- Dehiwala">
                         </div>
                         <div class="mb-3">
-                            <label for="formGroupExampleInput4" class="form-label">Contact No</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Ex:- +94712585698">
+                            <label for="saveModalInput4" class="form-label">Contact No</label>
+                            <input type="text" class="form-control" id="saveModalInput4" placeholder="Ex:- +94712585698">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -119,8 +119,75 @@
     <br>
     <br>
 
-    <button type="button" class="btn btn-outline-warning">Update</button>
-    <button type="button" class="btn btn-outline-danger">Delete</button>
+    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+    <!--         update modal-->
+    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModal"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title" id="updateModalTitle">Update Customer</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="updateModalInput1" class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="updateModalInput1" placeholder="Ex:- C001">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateModalInput2" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="updateModalInput2" placeholder="Ex:- Kamal Perera">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateModalInput3" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="updateModalInput3" placeholder="Ex:- Dehiwala">
+                    </div>
+                    <div class="mb-3">
+                        <label for="updateModalInput4" class="form-label">Contact No</label>
+                        <input type="text" class="form-control" id="updateModalInput4" placeholder="Ex:- +94712585698">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning">Update</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <button type="button" class="btn btn-outline-danger" data-bs-target="#deleteModal" data-bs-toggle="modal">Delete</button>
+    <!--         Delete modal-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"  aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title" id="deleteModalTitle">Delete Customer</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="deleteModalInput1" class="form-label">Customer ID</label>
+                        <input type="text" class="form-control" id="deleteModalInput1" placeholder="Ex:- C001">
+                    </div>
+                    <div class="mb-3">
+                        <label for="deleteModalInput2" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="deleteModalInput2" placeholder="Ex:- Kamal Perera">
+                    </div>
+                    <div class="mb-3">
+                        <label for="deleteModalInput3" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="deleteModalInput3" placeholder="Ex:- Dehiwala">
+                    </div>
+                    <div class="mb-3">
+                        <label for="deleteModalInput4" class="form-label">Contact No</label>
+                        <input type="text" class="form-control" id="deleteModalInput4" placeholder="Ex:- +94712585698">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <br>
