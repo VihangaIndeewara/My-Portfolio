@@ -119,7 +119,40 @@
   <br>
   <br>
 
-  <button type="button" class="btn btn-outline-warning">Update</button>
+  <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateModal">Update</button>
+  <!--         update modal-->
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModal"  aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success">
+          <h5 class="modal-title" id="updateModalTitle">Update Item</h5>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="updateModalInput1" class="form-label">Item Code</label>
+            <input type="text" class="form-control" id="updateModalInput1" placeholder="Ex:- I001">
+          </div>
+          <div class="mb-3">
+            <label for="updateModalInput2" class="form-label">Description</label>
+            <input type="text" class="form-control" id="updateModalInput2" placeholder="Ex:- Gold Mari 400g">
+          </div>
+          <div class="mb-3">
+            <label for="updateModalInput3" class="form-label">QtyOnHand</label>
+            <input type="text" class="form-control" id="updateModalInput3" placeholder="Ex:- 100">
+          </div>
+          <div class="mb-3">
+            <label for="updateModalInput4" class="form-label">Unit Price</label>
+            <input type="text" class="form-control" id="updateModalInput4" placeholder="Ex:- 100.00">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning">Update</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <button type="button" class="btn btn-outline-danger">Delete</button>
 
 
