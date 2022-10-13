@@ -89,7 +89,7 @@
               <input type="text" class="form-control" id="saveModalInput3" placeholder="Ex:- 100">
             </div>
             <div class="mb-3">
-              <label for="saveModalInput4" class="form-label">Unit Price</label>
+              <label for="saveModalInput4" class="form-label">Unit Price(Rs)</label>
               <input type="text" class="form-control" id="saveModalInput4" placeholder="Ex:- 100.00">
             </div>
           </div>
@@ -141,7 +141,7 @@
             <input type="text" class="form-control" id="updateModalInput3" placeholder="Ex:- 100">
           </div>
           <div class="mb-3">
-            <label for="updateModalInput4" class="form-label">Unit Price</label>
+            <label for="updateModalInput4" class="form-label">Unit Price(Rs)</label>
             <input type="text" class="form-control" id="updateModalInput4" placeholder="Ex:- 100.00">
           </div>
         </div>
@@ -153,7 +153,40 @@
     </div>
   </div>
 
-  <button type="button" class="btn btn-outline-danger">Delete</button>
+  <button type="button" class="btn btn-outline-danger" data-bs-target="#deleteModal" data-bs-toggle="modal">Delete</button>
+  <!--         Delete modal-->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal"  aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success">
+          <h5 class="modal-title" id="deleteModalTitle">Delete Item</h5>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="deleteModalInput1" class="form-label">Item Code</label>
+            <input type="text" class="form-control" id="deleteModalInput1" placeholder="Ex:- I001">
+          </div>
+          <div class="mb-3">
+            <label for="deleteModalInput2" class="form-label">Description</label>
+            <input type="text" class="form-control" id="deleteModalInput2" placeholder="Ex:- Gold Mari 400g">
+          </div>
+          <div class="mb-3">
+            <label for="deleteModalInput3" class="form-label">QtyOnHand</label>
+            <input type="text" class="form-control" id="deleteModalInput3" placeholder="Ex:- 100">
+          </div>
+          <div class="mb-3">
+            <label for="deleteModalInput4" class="form-label">Unit Price(Rs)</label>
+            <input type="text" class="form-control" id="deleteModalInput4" placeholder="Ex:- 100.00">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <br>
