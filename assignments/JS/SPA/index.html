@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="col-lg-6 col-xl-3 mb-2">
-                    <a href="#AllOrderPage" class="nav-link ">
+                    <a href="#AllOrderPage" id="allOrderImg" class="nav-link ">
                         <div class="card">
                             <div class="card-header bg-danger font-weight-bolder"><h3>All Order Details</h3></div>
                             <div class="card-body">
@@ -806,6 +806,14 @@
         $("#ItemPage").css("display","none")
         $("#PlaceOrderPage").css("display","block")
         $("#AllOrderPage").css("display","none")
+    });
+
+    $('#allOrderImg').click(function (){
+        $("#HomePage").css("display","none")
+        $("#CustomerPage").css("display","none")
+        $("#ItemPage").css("display","none")
+        $("#PlaceOrderPage").css("display","none")
+        $("#AllOrderPage").css("display","block")
     });
 
 </script>
