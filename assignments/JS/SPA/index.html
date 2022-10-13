@@ -36,16 +36,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav fs-5" >
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../POS/index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" id="home" href="../POS/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../POS/pages/customer.html">Customers</a>
+                        <a class="nav-link" id="customer" href="../POS/pages/customer.html">Customers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../POS/pages/item.html">Items</a>
+                        <a class="nav-link" id="item" href="../POS/pages/item.html">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="../POS/pages/placeOrder.html">Place Order</a>
+                        <a class="nav-link " id="placeOrder" href="../POS/pages/placeOrder.html">Place Order</a>
                     </li>
                 </ul>
 
@@ -57,7 +57,7 @@
 </header>
 
 <!--    Home Content-->
-<main id="HomePage">
+<main class="container-fluid" id="HomePage">
     <div class="jumbotron pt-md-5">
         <div id="home-tiles">
             <div class="row ">
@@ -759,7 +759,21 @@
         $("#AllOrderPage").css("display","none")
     });
 
+    $("#home").click(function (){
+        $("#HomePage").css("display","block")
+        $("#CustomerPage").css("display","none")
+        $("#ItemPage").css("display","none")
+        $("#PlaceOrderPage").css("display","none")
+        $("#AllOrderPage").css("display","none")
+    });
 
+    $("#customer").click(function (){
+        $("#HomePage").css("display","none")
+        $("#CustomerPage").css("display","block")
+        $("#ItemPage").css("display","none")
+        $("#PlaceOrderPage").css("display","none")
+        $("#AllOrderPage").css("display","none")
+    })
 
 </script>
 
