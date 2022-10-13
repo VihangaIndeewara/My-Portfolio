@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="col-lg-6 col-xl-3 mb-2">
-                    <a href="#ItemPage" class="nav-link ">
+                    <a href="#ItemPage" id="itemImg" class="nav-link ">
                         <div class="card">
                             <div class="card-header bg-warning font-weight-bolder"><h3>Items</h3></div>
                             <div class="card-body">
@@ -788,6 +788,14 @@
         $("#HomePage").css("display","none")
         $("#CustomerPage").css("display","block")
         $("#ItemPage").css("display","none")
+        $("#PlaceOrderPage").css("display","none")
+        $("#AllOrderPage").css("display","none")
+    });
+
+    $('#itemImg').click(function (){
+        $("#HomePage").css("display","none")
+        $("#CustomerPage").css("display","none")
+        $("#ItemPage").css("display","block")
         $("#PlaceOrderPage").css("display","none")
         $("#AllOrderPage").css("display","none")
     });
