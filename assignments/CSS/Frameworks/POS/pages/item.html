@@ -66,7 +66,44 @@
   <section class="row">
     <img src="../assets/images/item.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="item logo">
     <h1 class="topic text-center col-8">Items</h1>
-    <button type="button" class="btn btn-outline-success col-1 "style="width: 120px; height: 50px; margin-left: 1950px " ><h3 class="fs-3">+ New</h3></button>
+    <button type="button" class="btn btn-outline-success col-1 "style="width: 120px; height: 50px; margin-left: 1950px " data-bs-toggle="modal" data-bs-target="#saveModal"  ><h3 class="fs-3">+ New</h3></button>
+
+    <!--         save modal-->
+    <div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="saveModal"  aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h5 class="modal-title" id="saveModalTitle">New Item</h5>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="saveModalInput1" class="form-label">Item Code</label>
+              <input type="text" class="form-control" id="saveModalInput1" placeholder="Ex:- I001">
+            </div>
+            <div class="mb-3">
+              <label for="saveModalInput2" class="form-label">Description</label>
+              <input type="text" class="form-control" id="saveModalInput2" placeholder="Ex:- Gold Mari 400g">
+            </div>
+            <div class="mb-3">
+              <label for="saveModalInput3" class="form-label">QtyOnHand</label>
+              <input type="text" class="form-control" id="saveModalInput3" placeholder="Ex:- 100">
+            </div>
+            <div class="mb-3">
+              <label for="saveModalInput4" class="form-label">Unit Price</label>
+              <input type="text" class="form-control" id="saveModalInput4" placeholder="Ex:- 100.00">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </section>
   <br>
 
