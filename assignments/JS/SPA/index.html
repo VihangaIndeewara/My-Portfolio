@@ -57,7 +57,7 @@
 </header>
 
 <!--    Home Content-->
-<main>
+<main id="HomePage">
     <div class="jumbotron pt-md-5">
         <div id="home-tiles">
             <div class="row ">
@@ -127,7 +127,7 @@
 </main>
 
 <!--Customer Content-->
-<main class="container-fluid">
+<main class="container-fluid" id="CustomerPage">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/customer.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="customer logo">
@@ -317,7 +317,7 @@
 </main>
 
 <!--Item Content-->
-<main class="container-fluid">
+<main class="container-fluid" id="ItemPage">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/item.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="item logo">
@@ -504,7 +504,7 @@
 </main>
 
 <!--place Order-->
-<main class="container-fluid">
+<main class="container-fluid" id="PlaceOrderPage">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/order.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="order logo">
@@ -679,7 +679,7 @@
 </main>
 
 <!--all Order Details-->
-<main class="container-fluid">
+<main class="container-fluid" id="AllOrderPage">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/all_Orders.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="item logo">
@@ -747,6 +747,21 @@
 
 
 </main>
+
+<script src="../SPA/assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    $(document).ready(function (){
+         $("#HomePage").css("display","block")
+        $("#CustomerPage").css("display","none")
+        $("#ItemPage").css("display","none")
+        $("#PlaceOrderPage").css("display","none")
+        $("#AllOrderPage").css("display","none")
+    });
+
+
+
+</script>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
