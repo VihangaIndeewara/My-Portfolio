@@ -57,13 +57,13 @@
 </header>
 
 <!--    Home Content-->
-<main class="container-fluid" id="HomePage">
+<main class="container-fluid" id="HomePage" style="display: block">
     <div class="jumbotron pt-md-5">
         <div id="home-tiles">
             <div class="row ">
 
                 <div class="col-lg-6 col-xl-3 mb-2">
-                    <a href="pages/customer.html" class="nav-link ">
+                    <a href="#CustomerPage" class="nav-link ">
                         <div class="card">
                             <div class="card-header bg-success font-weight-bolder"><h3>Customers</h3></div>
                             <div class="card-body">
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="col-lg-6 col-xl-3 mb-2">
-                    <a href="pages/item.html.html" class="nav-link ">
+                    <a href="#ItemPage" class="nav-link ">
                         <div class="card">
                             <div class="card-header bg-warning font-weight-bolder"><h3>Items</h3></div>
                             <div class="card-body">
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="col-lg-6 col-xl-3 mb-2">
-                    <a href="pages/allOrder.html" class="nav-link ">
+                    <a href="#PlaceOrderPage" class="nav-link ">
                         <div class="card">
                             <div class="card-header bg-info font-weight-bolder"><h3>Place Order</h3></div>
                             <div class="card-body">
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="col-lg-6 col-xl-3 mb-2">
-                    <a href="pages/allOrder.html" class="nav-link ">
+                    <a href="#AllOrderPage" class="nav-link ">
                         <div class="card">
                             <div class="card-header bg-danger font-weight-bolder"><h3>All Order Details</h3></div>
                             <div class="card-body">
@@ -127,7 +127,7 @@
 </main>
 
 <!--Customer Content-->
-<main class="container-fluid" id="CustomerPage">
+<main class="container-fluid" id="CustomerPage" style="display: none">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/customer.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="customer logo">
@@ -317,7 +317,7 @@
 </main>
 
 <!--Item Content-->
-<main class="container-fluid" id="ItemPage">
+<main class="container-fluid" id="ItemPage" style="display: none">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/item.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="item logo">
@@ -504,7 +504,7 @@
 </main>
 
 <!--place Order-->
-<main class="container-fluid" id="PlaceOrderPage">
+<main class="container-fluid" id="PlaceOrderPage" style="display: none">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/order.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="order logo">
@@ -679,7 +679,7 @@
 </main>
 
 <!--all Order Details-->
-<main class="container-fluid" id="AllOrderPage">
+<main class="container-fluid" id="AllOrderPage" style="display: none">
     <br>
     <section class="row">
         <img src="../SPA/assets/images/all_Orders.jpg"  class="img-fluid col-3" style="width: 80px; height: 80px"alt="item logo">
@@ -751,13 +751,6 @@
 <script src="../SPA/assets/js/jquery-3.6.1.min.js"></script>
 
 <script>
-    $(document).ready(function (){
-         $("#HomePage").css("display","block")
-        $("#CustomerPage").css("display","none")
-        $("#ItemPage").css("display","none")
-        $("#PlaceOrderPage").css("display","none")
-        $("#AllOrderPage").css("display","none")
-    });
 
     $("#home").click(function (){
         $("#HomePage").css("display","block")
@@ -773,7 +766,23 @@
         $("#ItemPage").css("display","none")
         $("#PlaceOrderPage").css("display","none")
         $("#AllOrderPage").css("display","none")
-    })
+    });
+
+    $('#item').click(function (){
+        $("#HomePage").css("display","none")
+        $("#CustomerPage").css("display","none")
+        $("#ItemPage").css("display","block")
+        $("#PlaceOrderPage").css("display","none")
+        $("#AllOrderPage").css("display","none")
+    });
+
+    $('#placeOrder').click(function (){
+        $("#HomePage").css("display","none")
+        $("#CustomerPage").css("display","none")
+        $("#ItemPage").css("display","none")
+        $("#PlaceOrderPage").css("display","block")
+        $("#AllOrderPage").css("display","none")
+    });
 
 </script>
 
