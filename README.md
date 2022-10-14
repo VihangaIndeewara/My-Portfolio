@@ -10,6 +10,7 @@ Mock up - https://www.figma.com/file/JxlMj8DorMNlUPSqQPIqwP/Untitled?node-id=1%3
 
 
 # POS System
+This is my frame-work assignment
 
 Site Map - https://www.gloomaps.com/9y9NkqE6TD
 <br>
