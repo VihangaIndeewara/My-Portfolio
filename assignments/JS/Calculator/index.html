@@ -163,6 +163,17 @@
         })
     })
 
+    //division
+
+    $('#div').click(function () {
+        let temp = $('#calcDisplay').val()
+        $('#calcDisplay').val(" ")
+
+        $('#equal').click(function (){
+            $('#calcDisplay').val(parseInt(temp)/parseInt($('#calcDisplay').val()))
+            temp=0
+        })
+    })
 
 
 </script>
