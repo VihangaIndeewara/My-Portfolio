@@ -26,7 +26,7 @@ This is my framework assignment
 
 
 <ul>
-  <li><a href=" https://www.gloomaps.com/9y9NkqE6TD">Site Map</a></li>
+  <li><a href="https://www.gloomaps.com/9y9NkqE6TD">Site Map</a></li>
   <li><a href="https://wireframe.cc/12M1MW">Wire-Frame</a></li>
   <li><a href="https://www.figma.com/file/Xba3Be2pUIsXZia1ohyxL5/POS-System?node-id=1%3A2">Mock-up</a></li>
  </ul> 
