@@ -1,11 +1,17 @@
+<h2>Tech/Framework Used</h2>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JS</li>
+ </ul> 
+ 
+ <br>
+
+
 # My-Portfolio
 This is my personal website
 
-
-<h2>Tech/Framework Used</h2>
-
-
-Site Map - https://www.gloomaps.com/oHk6KfphME
+<a href="https://www.gloomaps.com/oHk6KfphME">Site Map</a>
 <br>
 Wire Frame - https://wireframe.cc/82slNG
 <br>
