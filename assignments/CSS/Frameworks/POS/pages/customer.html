@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="saveCustomer">Save</button>
+                        <button id="saveButton" type="button" class="btn btn-primary" >Save</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -209,43 +209,8 @@
                 <th scope="col">Contact No</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <th scope="row">C001</th>
-                <td>Nimal</td>
-                <td>Dehiwala</td>
-                <td>+94718598698</td>
-            </tr>
-            <tr>
-                <th scope="row">C002</th>
-                <td>Kamal</td>
-                <td>Galle</td>
-                <td>+94778963236</td>
-            </tr>
-            <tr>
-                <th scope="row">C003</th>
-                <td>Isuru</td>
-                <td>Kalutara</td>
-                <td>+94789698523</td>
-            </tr>
-            <tr>
-                <th scope="row">C004</th>
-                <td>Bimal</td>
-                <td>Kadawata</td>
-                <td>+94789125634</td>
-            </tr>
-            <tr>
-                <th scope="row">C005</th>
-                <td>Chamuditha</td>
-                <td>Kelaniya</td>
-                <td>+94708563523</td>
-            </tr>
-            <tr>
-                <th scope="row">C006</th>
-                <td>Dulshan</td>
-                <td>Mathugama</td>
-                <td>+94778563123</td>
-            </tr>
+            <tbody id="customerTable">
+
             </tbody>
     </table>
 
@@ -258,11 +223,28 @@
 <script>
     var customerArray =[];
 
-    $("#saveCustomer").click(function (){
-        let id= $("#saveModalInput1").val();
-        let name = $("#saveModalInput2").val();
-        let address = $("#saveModalInput3").val();
-        let contact = $("#saveModalInput4").val();
+    $("#saveButton").click(function (){
+        let cusId= $("#saveModalInput1").val();
+        let cusName = $("#saveModalInput2").val();
+        let cusAddress = $("#saveModalInput3").val();
+        let cusContact = $("#saveModalInput4").val();
+
+        var customerObject={
+            id : cusId,
+            name : cusName,
+            address : cusAddress,
+            contact : cusContact
+        }
+
+        customerArray.push(customerObject);
+
+        $("#customerTable").empty()
+
+        for (var customer of customerArray) {
+            var row = `<tr><th>${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.contact}</td></tr>`
+            $("#customerTable").append(row)
+        }
+
     })
 
 
