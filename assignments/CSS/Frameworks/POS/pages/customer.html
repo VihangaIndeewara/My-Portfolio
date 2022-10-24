@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary" id="saveCustomer">Save</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -253,5 +253,20 @@
 </main>
 
 <script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    var customerArray =[];
+
+    $("#saveCustomer").click(function (){
+        let id= $("#saveModalInput1").val();
+        let name = $("#saveModalInput2").val();
+        let address = $("#saveModalInput3").val();
+        let contact = $("#saveModalInput4").val();
+    })
+
+
+</script>
+
 </body>
 </html>
