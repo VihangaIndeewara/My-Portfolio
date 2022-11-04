@@ -6,7 +6,7 @@ $("#saveButtonI").attr("disabled",true)
 const codePattern=/^I[0-9]{3}$/;
 const descriptionPattern=/^[A-z ]{3,20}$/;
 const qtyOnHandPattern=/^[0-9.]{1,}$/;
-const unitPricePattern =/^[0-9]{1,}[.00]$/;
+const unitPricePattern =/^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 let itemValidationArray=[];
 
@@ -73,7 +73,11 @@ $("#btnSearchI").click(function (){
 
     for (var item of itemArray) {
         if (item.code==code){
-            alert(item.code+" "+item.description+" "+item.qtyOnHand+" "+item.unitPrice)
+            let res =alert(item.code+" "+item.description+" "+item.qtyOnHand+" "+item.unitPrice)
+            if (res==true){
+                $("#txtSearchI").val("");
+            }
+
         }else{
             alert("This id not valid")
         }
