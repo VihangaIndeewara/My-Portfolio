@@ -244,37 +244,44 @@
     validationArray.push({reg:contactPattern,txtField:$("#saveModalInput4"), error:"Customer contact number Pattern like this : [+940-9]{12}"})
 
 
+    function saveCustomer(){
+        let cusId= $("#saveModalInput1").val();
+        let cusName=  $("#saveModalInput2").val();
+        let cusAddress=  $("#saveModalInput3").val();
+        let cusContact=  $("#saveModalInput4").val();
+
+        var customer={
+            id:cusId,
+            name:cusName,
+            address:cusAddress,
+            contact:cusContact
+        }
+
+
+        customerArray.push(customer)
+
+        loadAllCustomers()
+        clearSaveTexts()
+
+    }
 
     $("#saveButton").click(function (){
-        let cusId= $("#saveModalInput1").val();
-        let cusName = $("#saveModalInput2").val();
-        let cusAddress = $("#saveModalInput3").val();
-        let cusContact = $("#saveModalInput4").val();
-
-        var customerObject={
-            id : cusId,
-            name : cusName,
-            address : cusAddress,
-            contact : cusContact
-        }
-
-        customerArray.push(customerObject);
-
-        $("#customerTable").empty()
-
-        for (var customer of customerArray) {
-            var row = `<tr><th>${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.contact}</td></tr>`
-            $("#customerTable").append(row)
-        }
-
-
-        $("#customerTable>tr").click(function (){
-            alert("a");
-        })
+        saveCustomer()
+        bindRowEvents()
 
     })
 
+    function loadAllCustomers(){
+        $("#cusTable").empty()
+        bindRowEvents()
 
+        for (var customer of customerArray) {
+            // var row =  "<tr><th>"+customer.id+"</th><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.contact+"</td></tr>"
+            var row =` <tr><th>${customer.id}</th><td>${customer.name}</td><td>${customer.address}</td><td>${customer.contact}</td></tr>`
+
+            $("#cusTable").append(row)
+        }
+    }
 
 
 </script>
