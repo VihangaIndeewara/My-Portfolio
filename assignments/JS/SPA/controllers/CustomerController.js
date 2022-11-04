@@ -1,4 +1,4 @@
-var customerArray =[];
+
 
 $("#saveButton").attr("disabled",true)
 
