@@ -301,6 +301,20 @@
         })
     }
 
+    $("#search").click(function (){
+        let id=  $("#txtSearch").val();
+
+        for (var customer of customerArray) {
+            if (customer.id==id){
+                alert(customer.id+" "+customer.name+" "+customer.address+" "+customer.contact)
+            }else{
+                alert("This id not valid")
+            }
+        }
+
+
+    })
+
 
 </script>
 
