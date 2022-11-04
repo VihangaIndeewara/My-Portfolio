@@ -304,22 +304,25 @@
                         <div class="mb-3">
                             <label for="saveModalInput1" class="form-label">Item Code</label>
                             <input type="text" class="form-control" id="saveModalInput1I" placeholder="Ex:- I001">
-                        </div>
+                            <span class="control-error"></span>                        </div>
                         <div class="mb-3">
                             <label for="saveModalInput2" class="form-label">Description</label>
                             <input type="text" class="form-control" id="saveModalInput2I" placeholder="Ex:- Gold Mari 400g">
+                            <span class="control-error"></span>
                         </div>
                         <div class="mb-3">
                             <label for="saveModalInput3" class="form-label">QtyOnHand</label>
                             <input type="text" class="form-control" id="saveModalInput3I" placeholder="Ex:- 100">
+                            <span class="control-error"></span>
                         </div>
                         <div class="mb-3">
                             <label for="saveModalInput4" class="form-label">Unit Price(Rs)</label>
                             <input type="text" class="form-control" id="saveModalInput4I" placeholder="Ex:- 100.00">
+                            <span class="control-error"></span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary" id="saveButtonI">Save</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -335,8 +338,8 @@
     <section class="row">
         <div class=" d-flex flex-md-column flex-sm-row">
             <form class="d-flex flex-column flex-sm-row" role="search">
-                <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-info" type="submit">Search</button>
+                <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"  id="txtSearchI">
+                <button class="btn btn-outline-info" type="button" id="btnSearchI">Search</button>
             </form>
         </div>
     </section>
@@ -371,7 +374,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning">Update</button>
+                    <button type="button" class="btn btn-warning"  id="btnUpdateI">Update</button>
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -405,7 +408,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger" id="btnDeleteI">Delete</button>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -431,43 +434,8 @@
             <th scope="col">Unit Price (Rs)</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-            <th scope="row">I001</th>
-            <td>Milk Powder 400g</td>
-            <td>45</td>
-            <td>1040.00</td>
-        </tr>
-        <tr>
-            <th scope="row">I002</th>
-            <td>Dhal Bulk 1kg</td>
-            <td>120</td>
-            <td>520.00</td>
-        </tr>
-        <tr>
-            <th scope="row">I003</th>
-            <td>Dhal Packet 1Kg</td>
-            <td>100</td>
-            <td>570.00</td>
-        </tr>
-        <tr>
-            <th scope="row">I004</th>
-            <td>Milo 400g</td>
-            <td>45</td>
-            <td>420.00</td>
-        </tr>
-        <tr>
-            <th scope="row">I005</th>
-            <td>Gold Mari 100g</td>
-            <td>50</td>
-            <td>100.00</td>
-        </tr>
-        <tr>
-            <th scope="row">I006</th>
-            <td>Chocolate Biscuit 100g</td>
-            <td>70</td>
-            <td>150.00</td>
-        </tr>
+        <tbody id="itemTable">
+
         </tbody>
     </table>
 </main>
@@ -722,7 +690,7 @@
 <script src="db/db.js"></script>
 <script src="controllers/DashBoardController.js"></script>
 <script src="controllers/CustomerController.js"></script>
-
+<script src="controllers/ItemController.js"></script>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>
