@@ -206,7 +206,7 @@
       <th scope="col">Unit Price (Rs)</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody id="itemTable">
 
     </tbody>
   </table>
@@ -262,6 +262,32 @@
 
   })
 
+  function loadAllItems(){
+    $("#itemTable").empty()
+    bindRowEvents()
+
+    for (var item of itemArray) {
+      // var row =  "<tr><th>"+customer.id+"</th><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.contact+"</td></tr>"
+      var row =` <tr><th>${item.id}</th><td>${item.name}</td><td>${item.address}</td><td>${item.contact}</td></tr>`
+
+      $("#itemTable").append(row)
+    }
+  }
+
+  function bindRowEvents(){
+
+    $("#item>tr").click(function (){
+      let code=$(this).children(":eq(0)").text();
+      let description=$(this).children(":eq(1)").text();
+      let qtyOnHand=$(this).children(":eq(2)").text();
+      let unitPrice=$(this).children(":eq(3)").text();
+
+      $("#updateModalInput1").val(code);
+      $("#updateModalInput2").val(description);
+      $("#updateModalInput3").val(qtyOnHand);
+      $("#updateModalInput4").val(unitPrice);
+    })
+  }
 
 
 </script>
