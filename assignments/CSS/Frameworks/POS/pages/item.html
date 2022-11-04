@@ -146,7 +146,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning">Update</button>
+          <button type="button" class="btn btn-warning" id="btnUpdate">Update</button>
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
@@ -398,6 +398,31 @@
     }else{
       $("#saveButton").attr("disabled",false)
     }
+  }
+
+  $("#btnUpdate").click(function () {
+    let itemCode = $("#updateModalInput1").val();
+    let item = searchItem(itemCode);
+    if (item!=null) {
+      item.description =$("#updateModalInput2").val()
+      item.qtyOnHand =$("#updateModalInput3").val()
+      item.unitPrice =$("#updateModalInput4").val()
+
+      clearUpdateTexts()
+      loadAllCustomers()
+    } else {
+      alert("Update Failed..!");
+
+    }
+  });
+
+  function searchItem(itemCode) {
+    for (let item of itemArray) {
+      if (item.id == itemCode) {
+        return item;
+      }
+    }
+    return null;
   }
 
 
