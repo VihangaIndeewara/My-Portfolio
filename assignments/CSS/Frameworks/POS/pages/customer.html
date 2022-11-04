@@ -315,6 +315,191 @@
 
     })
 
+    $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").on('keydown', function (event) {
+        if (event.key == "Tab") {
+            event.preventDefault();
+        }
+    });
+
+
+    $("#saveModalInput1").on('keydown', function (event) {
+        if (event.key == "Enter" && check(idPattern,$("#saveModalInput1"))) {
+            $("#saveModalInput2").focus();
+        }else{
+            $("#saveModalInput1").focus()
+        }
+    });
+
+    $("#saveModalInput2").on('keydown', function (event) {
+        if (event.key == "Enter" && check(namePattern,$("#saveModalInput2"))) {
+            $("#saveModalInput3").focus();
+        }
+    });
+
+    $("#saveModalInput3").on('keydown', function (event) {
+        if (event.key == "Enter" && check(addressPattern, $("#saveModalInput3"))) {
+            $("#saveModalInput4").focus();
+        }
+    });
+
+    $("#saveModalInput4").on('keydown', function (event) {
+        if (event.key == "Enter" && check(contactPattern,$("#saveModalInput4"))) {
+            let response = confirm("Do you want to add this customer.?");
+
+            if (response) {
+                saveCustomer()
+
+            }
+
+        }
+
+    });
+
+
+    $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").on('keyup', function (event) {
+        checkValidity();
+    });
+
+    $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").on('blur', function (event) {
+        checkValidity();
+    });
+
+    function check(pattern,textField){
+
+        let inputValue=textField.val();
+        return pattern.test(inputValue)? true:false;
+    }
+
+    function checkValidity(){
+        let errorCount=0;
+        for (let validation of validationArray) {
+            if (check(validation.reg,validation.txtField)){
+                success(validation.txtField,"");
+            }else {
+                errorCount=errorCount+1;
+                error(validation.txtField,validation.error);
+            }
+
+        }
+        setSaveButton(errorCount);
+
+    }
+
+    function success(txtField,error){
+        if (txtField.val().length <= 0) {
+            defaultText(txtField,"")
+        }else{
+            txtField.css("border","2px solid green")
+            txtField.parent().children("span").text(error)
+        }
+    }
+
+    function error(txtField,error){
+        if (txtField.val().length <= 0) {
+            defaultText(txtField,"")
+        }else{
+            txtField.css("border","2px solid red")
+            txtField.parent().children("span").text(error).css("color","red")
+        }
+    }
+
+    function defaultText(txtField,error){
+        txtField.css("border","2px solid #ced4da")
+        txtField.parent().children("span").test(error).css("color","red")
+
+    }
+
+    function setSaveButton(value){
+        if (value > 0) {
+            $("#saveButton").attr("disabled",true)
+        }else{
+            $("#saveButton").attr("disabled",false)
+        }
+    }
+
+
+    $("#btnUpdate").click(function () {
+        let customerID = $("#updateModalInput1").val();
+        let customer = searchCustomer(customerID);
+        if (customer!=null) {
+            customer.name =$("#updateModalInput2").val()
+            customer.address =$("#updateModalInput3").val()
+            customer.contact =$("#updateModalInput4").val()
+
+            clearUpdateTexts()
+            loadAllCustomers()
+        } else {
+            alert("Update Failed..!");
+
+        }
+    });
+
+    function searchCustomer(cusID) {
+        for (let customer of customerArray) {
+            if (customer.id == cusID) {
+                return customer;
+            }
+        }
+        return null;
+    }
+
+    $("#btnDelete").click(function () {
+        let deleteID = $("#deleteModalInput1").val();
+
+        let option = confirm("Do you really want to delete customer id :" + deleteID);
+        if (option){
+            if (deleteCustomer(deleteID)) {
+                setTextfieldValues("", "", "", "");
+            } else {
+                alert("No such customer to delete. please check the id");
+            }
+        }
+    });
+
+    $("#deleteModalInput1").on('keyup', function (event) {
+        if (event.code == "Enter") {
+            let typedId = $("#deleteModalInput1").val();
+            let customer = searchCustomer(typedId);
+            if (customer != null) {
+                setTextfieldValues(customer);
+            } else {
+                alert("There is no customer available for that " + typedId);
+                setTextfieldValues("", "", "", "");
+            }
+        }
+    });
+
+    function deleteCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            let indexNumber = customerArray.indexOf(customer);
+            customerArray.splice(indexNumber, 1);
+            loadAllCustomers();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function setTextfieldValues(customer) {
+        $("#deleteModalInput1").val(customer.id);
+        $("#deleteModalInput2").val(customer.name);
+        $("#deleteModalInput3").val(customer.address);
+        $("#deleteModalInput4").val(customer.contact);
+    }
+
+    function clearSaveTexts(){
+        $("#saveModalInput1").focus()
+        $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").val("");
+        defaultText()
+
+    }
+
+    function clearUpdateTexts(){
+        $("#updateModalInput1").focus()
+        $("#updateModalInput1,#updateModalInput2,#updateModalInput3,#updateModalInput4").val("");
+    }
+
 
 </script>
 
