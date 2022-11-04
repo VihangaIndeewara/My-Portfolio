@@ -345,6 +345,61 @@
   });
 
 
+  $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").on('keyup', function (event) {
+    checkValidity();
+  });
+
+  $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").on('blur', function (event) {
+    checkValidity();
+  });
+
+  function checkValidity(){
+    let errorCount=0;
+    for (let validation of validationArray) {
+      if (check(validation.reg,validation.txtField)){
+        success(validation.txtField,"");
+      }else {
+        errorCount=errorCount+1;
+        error(validation.txtField,validation.error);
+      }
+
+    }
+    setSaveButton(errorCount);
+
+  }
+
+  function success(txtField,error){
+    if (txtField.val().length <= 0) {
+      defaultText(txtField,"")
+    }else{
+      txtField.css("border","2px solid green")
+      txtField.parent().children("span").text(error)
+    }
+  }
+
+  function error(txtField,error){
+    if (txtField.val().length <= 0) {
+      defaultText(txtField,"")
+    }else{
+      txtField.css("border","2px solid red")
+      txtField.parent().children("span").text(error).css("color","red")
+    }
+  }
+
+  function defaultText(txtField,error){
+    txtField.css("border","2px solid #ced4da")
+    txtField.parent().children("span").test(error).css("color","red")
+
+  }
+
+  function setSaveButton(value){
+    if (value > 0) {
+      $("#saveButton").attr("disabled",true)
+    }else{
+      $("#saveButton").attr("disabled",false)
+    }
+  }
+
 
 </script>
 
