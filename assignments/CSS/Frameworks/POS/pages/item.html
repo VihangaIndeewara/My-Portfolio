@@ -232,8 +232,36 @@
 
   validationArray.push({reg:codePattern,txtField:$("#saveModalInput1"), error:"Item code pattern like this : I[0-9]{3}$"});
   validationArray.push({reg:descriptionPattern,txtField:$("#saveModalInput2"), error:"Item description pattern like this : [A-z]{3,20}"})
-  validationArray.push({reg:qtyOnHandPattern,txtField:$("#saveModalInput3"), error:"Item QtyOnHand pattern like this : [0-9.]{1,}"})
+  validationArray.push({reg:qtyOnHandPattern,txtField:$("#saveModalInput3"), error:"Item qtyOnHand pattern like this : [0-9.]{1,}"})
   validationArray.push({reg:unitPricePattern,txtField:$("#saveModalInput4"), error:"Item unitPrice  pattern like this : [0-9]{1,}[.00]"})
+
+  function saveItem(){
+    let itemCode= $("#saveModalInput1").val();
+    let description=  $("#saveModalInput2").val();
+    let qtyOnHand=  $("#saveModalInput3").val();
+    let unitPrice=  $("#saveModalInput4").val();
+
+    var item={
+      code:itemCode,
+      description:description,
+      qtyOnHand:qtyOnHand,
+      unitPrice:unitPrice
+    }
+
+
+    itemArray.push(item)
+
+    loadAllItems()
+    clearSaveTexts()
+
+  }
+
+  $("#saveButton").click(function (){
+    saveItem()
+    bindRowEvents()
+
+  })
+
 
 
 </script>
