@@ -180,7 +180,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-danger" id="btnDelete">Delete</button>
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
@@ -425,6 +425,50 @@
     return null;
   }
 
+  $("#btnDelete").click(function () {
+    let deleteID = $("#deleteModalInput1").val();
+
+    let option = confirm("Do you really want to delete Item code :" + deleteID);
+    if (option){
+      if (deleteItem(deleteID)) {
+        setTextfieldValues("", "", "", "");
+      } else {
+        alert("Please check the id");
+      }
+    }
+  });
+
+  $("#deleteModalInput1").on('keyup', function (event) {
+    if (event.code == "Enter") {
+      let typedId = $("#deleteModalInput1").val();
+      let item = searchItem(typedId);
+      if (item != null) {
+        setTextfieldValues(item);
+      } else {
+        alert("Please check the id");
+        setTextfieldValues("", "", "", "");
+      }
+    }
+  });
+
+  function deleteItem(itemCode) {
+    let item = searchCustomer(itemCode);
+    if (item != null) {
+      let indexNumber = itemArray.indexOf(item);
+      itemArray.splice(indexNumber, 1);
+      loadAllItems();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function setTextfieldValues(item) {
+    $("#deleteModalInput1").val(item.code);
+    $("#deleteModalInput2").val(item.description);
+    $("#deleteModalInput3").val(item.qtyOnHand);
+    $("#deleteModalInput4").val(itwm.unitPrice);
+  }
 
 </script>
 
