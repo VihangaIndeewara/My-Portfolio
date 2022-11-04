@@ -232,8 +232,8 @@
     $("#saveButton").attr("disabled",true)
 
     const idPattern=/^C[0-9]{3}$/;
-    const namePattern=/^[A-z]{4,20}$/;
-    const addressPattern=/^[A-z0-9./,-]{7,}$/;
+    const namePattern=/^[A-z ]{4,20}$/;
+    const addressPattern=/^[A-z0-9. /,-]{7,}$/;
     const contactPattern =/^[+940-9]{12}$/;
 
     let validationArray=[];
