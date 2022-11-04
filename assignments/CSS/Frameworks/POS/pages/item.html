@@ -110,8 +110,8 @@
   <section class="row">
     <div class=" d-flex flex-md-column flex-sm-row">
       <form class="d-flex flex-column flex-sm-row" role="search">
-        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-info" type="submit">Search</button>
+        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search" id="txtSearch">
+        <button class="btn btn-outline-info" type="button" id="btnSearch">Search</button>
       </form>
     </div>
   </section>
@@ -288,6 +288,20 @@
       $("#updateModalInput4").val(unitPrice);
     })
   }
+
+  $("#btnSearch").click(function (){
+    let id=  $("#txtSearch").val();
+
+    for (var item of itemArray) {
+      if (item.id==id){
+        alert(item.id+" "+item.name+" "+item.address+" "+item.contact)
+      }else{
+        alert("This id not valid")
+      }
+    }
+
+
+  })
 
 
 </script>
