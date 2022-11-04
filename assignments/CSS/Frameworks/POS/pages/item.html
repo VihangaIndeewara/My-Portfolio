@@ -304,6 +304,48 @@
   })
 
 
+  $("#saveModalInput1,#saveModalInput2,#saveModalInput3,#saveModalInput4").on('keydown', function (event) {
+    if (event.key == "Tab") {
+      event.preventDefault();
+    }
+  });
+
+
+  $("#saveModalInput1").on('keydown', function (event) {
+    if (event.key == "Enter" && check(codePattern,$("#saveModalInput1"))) {
+      $("#saveModalInput2").focus();
+    }else{
+      $("#saveModalInput1").focus()
+    }
+  });
+
+  $("#saveModalInput2").on('keydown', function (event) {
+    if (event.key == "Enter" && check(descriptionPattern,$("#saveModalInput2"))) {
+      $("#saveModalInput3").focus();
+    }
+  });
+
+  $("#saveModalInput3").on('keydown', function (event) {
+    if (event.key == "Enter" && check(qtyOnHandPattern, $("#saveModalInput3"))) {
+      $("#saveModalInput4").focus();
+    }
+  });
+
+  $("#saveModalInput4").on('keydown', function (event) {
+    if (event.key == "Enter" && check(unitPricePattern,$("#saveModalInput4"))) {
+      let response = confirm("Do you want to add this item.?");
+
+      if (response) {
+        saveCustomer()
+
+      }
+
+    }
+
+  });
+
+
+
 </script>
 
 
