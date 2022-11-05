@@ -1,4 +1,4 @@
-let itemArray=[];
+
 
 
 $("#saveButtonI").attr("disabled",true)
@@ -177,7 +177,7 @@ function error(txtField,error){
 
 function defaultText(txtField,error){
     txtField.css("border","2px solid #ced4da")
-    txtField.parent().children("span").test(error).css("color","red")
+    txtField.parent().children("span").text(error).css("color","red")
 
 }
 

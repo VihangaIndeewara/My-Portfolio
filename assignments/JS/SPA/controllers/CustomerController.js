@@ -1,5 +1,4 @@
 
-
 $("#saveButton").attr("disabled",true)
 
 const idPattern=/^C[0-9]{3}$/;
@@ -176,7 +175,7 @@ function error(txtField,error){
 
 function defaultText(txtField,error){
     txtField.css("border","2px solid #ced4da")
-    txtField.parent().children("span").test(error).css("color","red")
+    txtField.parent().children("span").text(error).css("color","red")
 
 }
 
@@ -270,4 +269,3 @@ function clearUpdateTexts(){
     $("#updateModalInput1").focus()
     $("#updateModalInput1,#updateModalInput2,#updateModalInput3,#updateModalInput4").val("");
 }
-
