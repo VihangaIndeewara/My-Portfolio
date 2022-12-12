@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight Rider</title>
+
+  <style>
+      body{
+          background: dimgray;
+      }
+
+      body>h1{
+          color: white;
+          position: absolute;
+          width: max-content;
+          top: 100px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          font-size: 40px;
+      }
+
+    #mainSection{
+        width: 1000px;
+        height: 70px;
+        border: 1px solid black;
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom:0;
+        margin: auto;
+    }
+
+    #mainSection>div{
+        width: 200px;
+        height: 70px;
+        border: 1px solid black;
+        display: inline-block;
+        position: relative;
+    }
+
+    #btn{
+        width: 200px;
+        height: 45px;
+        position: absolute;
+        left: 0;
+        right:0;
+        margin: auto;
+        top: 650px;
+
+    }
+
+      #btn>button{
+          width: 80px;
+          height: 45px;
+          margin: 7px;
+          cursor: pointer;
+      }
+
+      #start{
+          background: green;
+          font-weight: bold;
+          font-size: 17px;
+      }
+
+      #end{
+          background: red;
+          font-weight: bold;
+          font-size: 17px;
+      }
+
+
+
+  </style>
+</head>
+<body>
+
+<h1>Knight Rider</h1>
+
+<section id="mainSection">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+
+<section id="btn">
+    <button id="start">Start</button>
+    <button id="end">End</button>
+</section>
+
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    var knightRider={
+         count:0,
+        tempArray:[],
+         rightColors:["white","white","white","white","white","white","brown","#8E672CFF","#390B20FF","#34342AFF","red"],
+         leftColors:["white","white","white","white","white","white","red","#34342AFF","#390B20FF","#8E672CFF","brown"],
+
+
+        animateLeft:function (){
+            var lastColor=this.tempArray.pop()
+            this.tempArray.unshift(lastColor)
+        },
+
+        animateRight:function (){
+             var firstColor=this.tempArray.shift()
+            this.tempArray.push(firstColor)
+        },
+
+        animate:function (){
+             this.count++;
+             if (this.count<=this.leftColors.length){
+                 this.tempArray=this.leftColors;
+                 this.animateLeft()
+             }else {
+                 if (this.count >= this.rightColors.length * 2) {
+                     this.count = 0;
+                 }
+                 this.tempArray=this.rightColors;
+                 this.animateRight()
+             }
+        }
+
+
+    }
+
+    setDiv();
+
+    function setDiv() {
+        $("#mainSection").empty()
+        for (let i = 0; i < knightRider.tempArray.length/2; i++) {
+            $("#mainSection").append(`<div style="background :${knightRider.tempArray[i]}"</div>`)
+        }
+        knightRider.animate();
+    }
+
+    var id=setInterval(setDiv, 60);
+
+    $("#start").click(function (){
+        clearInterval(id);
+        id=setInterval(setDiv, 60);
+    })
+
+    $("#end").click(function (){
+        clearInterval(id);
+    });
+
+</script>
+</body>
+</html>
