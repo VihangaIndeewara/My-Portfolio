@@ -41,3 +41,9 @@ function runAnimation() {
     boy.src = "assets/image/Run (" + runImageNumber + ").png";
 
 }
+
+function runAnimationStart() {
+    runAnimationNumber = setInterval(runAnimation, 100);
+    clearInterval(idleAnimationNumber);
+
+}
