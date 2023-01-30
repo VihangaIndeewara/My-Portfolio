@@ -29,3 +29,15 @@ function idleAnimation() {
 function idleStartAnimation() {
     idleAnimationNumber = setInterval(idleAnimation, 200);
 }
+
+/*run boy*/
+function runAnimation() {
+    runImageNumber = runImageNumber + 1;
+
+    if (runImageNumber === 9) {
+        runImageNumber = 1;
+    }
+
+    boy.src = "assets/image/Run (" + runImageNumber + ").png";
+
+}
