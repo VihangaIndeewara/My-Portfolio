@@ -14,3 +14,18 @@ var boxAnimationID = 0;
 var deadImageNumber = 1;
 var deadAnimationNumber = 0;
 var score = 0;
+
+/*boy Animation*/
+function idleAnimation() {
+    idleImageNumber = idleImageNumber + 1;
+
+    if (idleImageNumber === 11) {
+        idleImageNumber = 1;
+    }
+
+    boy.src = "assets/image/Idle (" + idleImageNumber + ").png";
+}
+
+function idleStartAnimation() {
+    idleAnimationNumber = setInterval(idleAnimation, 200);
+}
