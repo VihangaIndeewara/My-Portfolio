@@ -47,3 +47,41 @@ function runAnimationStart() {
     clearInterval(idleAnimationNumber);
 
 }
+
+/*Enter key Press*/
+function keyCheck(event) {
+    var keyCode = event.which;
+
+    if (keyCode === 13) {
+        if (runAnimationNumber === 0) {
+            runAnimationStart();
+        }
+
+        /*move background*/
+        if (moveBackgroundAnimationID === 0) {
+            moveBackgroundAnimationID = setInterval(moveBackground, 100);
+        }
+
+        /*move gif*/
+        if (boxAnimationID === 0) {
+            boxAnimationID = setInterval(boxAnimation, 100);
+        }
+    }
+
+    /*space button for jump*/
+    if (keyCode === 32) {
+        if (jumpAnimationNumber === 0) {
+            jumpAnimationStart();
+        }
+
+        /*move background*/
+        if (moveBackgroundAnimationID === 0) {
+            moveBackgroundAnimationID = setInterval(moveBackground, 100);
+        }
+
+        /*move gif*/
+        if (boxAnimationID === 0) {
+            boxAnimationID = setInterval(boxAnimation, 100);
+        }
+    }
+}
