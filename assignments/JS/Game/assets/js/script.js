@@ -84,4 +84,25 @@ function keyCheck(event) {
             boxAnimationID = setInterval(boxAnimation, 100);
         }
     }
+
+
+    function moveBackground() {
+        backgroundPositionX = backgroundPositionX - 20;
+
+        document.getElementById("background").style.backgroundPositionX = backgroundPositionX + "px";
+
+        /*score*/
+        score = score + 10;
+        document.getElementById("score").innerHTML = "Score : " + score;
+
+        if (score === 3000) {
+            document.getElementById("win").style.visibility="visible";
+            document.getElementById("lastScore").innerHTML=score;
+
+            clearInterval(boxAnimationID);
+            clearInterval(runAnimationNumber);
+            clearInterval(moveBackgroundAnimationID);
+        }
+    }
+
 }
