@@ -105,4 +105,26 @@ function keyCheck(event) {
         }
     }
 
+
+    function jumpAnimation() {
+        jumpImageNumber = jumpImageNumber + 1;
+
+        if (jumpImageNumber <= 6) {
+            girlMarginTop = girlMarginTop - 35;
+            girl.style.marginTop = girlMarginTop + "px";
+        }
+
+        if (jumpImageNumber >= 7) {
+            girlMarginTop = girlMarginTop + 35;
+            girl.style.marginTop = girlMarginTop + "px";
+        }
+
+        if (jumpImageNumber === 11) {
+            jumpImageNumber = 1;
+            clearInterval(jumpAnimationNumber);
+            jumpAnimationNumber = 0;
+            runImageNumber = 0;
+            runAnimationStart();
+        }
+
 }
