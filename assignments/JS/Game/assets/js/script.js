@@ -126,5 +126,17 @@ function keyCheck(event) {
             runImageNumber = 0;
             runAnimationStart();
         }
+        boy.src = "assets/image/Jump (" + jumpImageNumber + ").png";
+    }
+
+    function jumpAnimationStart() {
+        clearInterval(idleAnimationNumber);
+        runImageNumber = 0;
+        clearInterval(runAnimationNumber);
+        jumpAnimationNumber = setInterval(jumpAnimation, 100);
+
+    }
+
+    let boxMarginLeft = 1600;
 
 }
