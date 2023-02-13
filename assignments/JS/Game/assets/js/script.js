@@ -169,3 +169,55 @@ function createBarriers() {
         }
     }
 }
+
+
+function boxAnimation() {
+    for (var i = 0; i < 10; i++) {
+        var box = document.getElementById("box" + i);
+        var currentMarginLeft = getComputedStyle(box).marginLeft;
+        var newMarginLeft = parseInt(currentMarginLeft) - 35;
+        box.style.marginLeft = newMarginLeft + "px";
+
+
+        if (newMarginLeft >= -110 & newMarginLeft <= 100) {
+            if (girlMarginTop > 500) {
+                clearInterval(boxAnimationID);
+
+                clearInterval(runAnimationNumber);
+                runAnimationNumber = -1;
+
+                clearInterval(jumpAnimationNumber);
+                jumpAnimationNumber = -1;
+
+                clearInterval(moveBackgroundAnimationID);
+                moveBackgroundAnimationID = -1;
+
+                deadAnimationNumber = setInterval(deadAnimation, 100);
+            }
+        }
+    }
+}
+
+
+/*dead boy*/
+function deadAnimation() {
+    deadImageNumber = deadImageNumber + 1;
+
+    if (deadImageNumber === 11) {
+        deadImageNumber = 10;
+
+    }
+
+    boy.src = "assets/image/Dead (" + deadImageNumber + ").png";
+
+    if (deadImageNumber === 10) {
+        /*alert("Game Over...!!!");
+        score = 0;*/
+        clearInterval(deadAnimationNumber);
+        document.getElementById("end").style.visibility="visible";
+        document.getElementById("finalScore").innerHTML=score;
+    }
+}
+function reloard(){
+    location.reload();
+}
