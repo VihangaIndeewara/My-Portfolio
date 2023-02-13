@@ -23,7 +23,7 @@ function idleAnimation() {
         idleImageNumber = 1;
     }
 
-    boy.src = "assets/image/Idle (" + idleImageNumber + ").png";
+    boy.src = "assets/image/Idle("+idleImageNumber+").png";
 }
 
 function idleStartAnimation() {
@@ -38,7 +38,7 @@ function runAnimation() {
         runImageNumber = 1;
     }
 
-    boy.src = "assets/image/Run (" + runImageNumber + ").png";
+    boy.src = "assets/image/Run("+runImageNumber+").png";
 
 }
 
@@ -111,13 +111,13 @@ function keyCheck(event) {
         jumpImageNumber = jumpImageNumber + 1;
 
         if (jumpImageNumber <= 6) {
-            girlMarginTop = girlMarginTop - 35;
-            girl.style.marginTop = girlMarginTop + "px";
+            boyMarginTop = boyMarginTop - 35;
+            boy.style.marginTop = boyMarginTop + "px";
         }
 
         if (jumpImageNumber >= 7) {
-            girlMarginTop = girlMarginTop + 35;
-            girl.style.marginTop = girlMarginTop + "px";
+            boyMarginTop = boyMarginTop + 35;
+            boy.style.marginTop = boyMarginTop + "px";
         }
 
         if (jumpImageNumber === 11) {
@@ -127,7 +127,7 @@ function keyCheck(event) {
             runImageNumber = 0;
             runAnimationStart();
         }
-        boy.src = "assets/image/Jump (" + jumpImageNumber + ").png";
+        boy.src = "assets/image/Jump("+jumpImageNumber+").png";
     }
 
     function jumpAnimationStart() {
@@ -180,7 +180,7 @@ function boxAnimation() {
 
 
         if (newMarginLeft >= -110 & newMarginLeft <= 100) {
-            if (girlMarginTop > 500) {
+            if (boyMarginTop > 500) {
                 clearInterval(boxAnimationID);
 
                 clearInterval(runAnimationNumber);
@@ -208,7 +208,7 @@ function deadAnimation() {
 
     }
 
-    boy.src = "assets/image/Dead (" + deadImageNumber + ").png";
+    boy.src = "assets/image/Dead("+deadImageNumber+").png";
 
     if (deadImageNumber === 10) {
         /*alert("Game Over...!!!");
@@ -218,6 +218,6 @@ function deadAnimation() {
         document.getElementById("finalScore").innerHTML=score;
     }
 }
-function reloard(){
+function reload(){
     location.reload();
 }

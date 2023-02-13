@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game</title>
+    <title>Mario Game</title>
+    <!--import css file-->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="body" onload="idleStartAnimation(); createBarriers();" onkeypress="keyCheck(event);">
+<div class="background" id="background">
+    <img id="boy" src="assets/image/Idle(1).png">
+    <div class="score" id="score">0</div>
 
+    <div class="end" id="end">
+        <div class="gameOver">Game Over!!!</div>
+        <div>Your Score</div>
+        <div class="finalScore" id="finalScore">0</div>
+        <button class="startAgain" onclick="reload();">Start Again</button>
+    </div>
+
+    <div class="win" id="win">
+        <div class="winGame">Level Completed!!!</div>
+        <div>Your Score</div>
+        <div class="lastScore" id="lastScore">0</div>
+        <button class="nextLevel" onclick="reload();">Next Level</button>
+    </div>
+
+
+</div>
+
+<!--import js file-->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
