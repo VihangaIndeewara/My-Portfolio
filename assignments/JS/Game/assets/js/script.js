@@ -84,6 +84,7 @@ function keyCheck(event) {
             boxAnimationID = setInterval(boxAnimation, 100);
         }
     }
+}
 
 
     function moveBackground() {
@@ -139,4 +140,32 @@ function keyCheck(event) {
 
     let boxMarginLeft = 1600;
 
+/*barriers*/
+function createBarriers() {
+
+    for (var i = 0; i <= 40; i++) {
+        var box = document.createElement("div");
+        box.className = "box";
+        document.getElementById("background").appendChild(box);
+        box.style.marginLeft = boxMarginLeft + "px";
+        box.id = "box" + i;
+
+        /*boxMarginLeft = boxMarginLeft + 1000;*/
+
+        if (i < 4) {
+            boxMarginLeft += 1000;
+        }
+
+        if (i < 20) {
+            boxMarginLeft += 500;
+        }
+
+        if (i < 30) {
+            boxMarginLeft += 250;
+        }
+
+        if (i >= 30) {
+            boxMarginLeft += 100;
+        }
+    }
 }
