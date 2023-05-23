@@ -43,15 +43,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cormorant+Garamond:ital,wght@1,600&family=DynaPuff&family=Lato:ital@1&family=Merriweather:ital@1&family=Noto+Sans:wght@500;700&family=Oswald:wght@600&family=PT+Serif&family=Pacifico&family=Ubuntu&display=swap" rel="stylesheet">
 
     <style>
+
+
+
         body{
             background: #F0F0F0;
+            height: 2600px;
 
         }
+
+        header{
+            background: #231955;
+            height: 100px;
+        }
+
+        .glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 0, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glassBackground {
+            background: linear-gradient(135deg, #E3DDD3,#E3DDD3);
+        }
+
 
         .topic {
             position: absolute;
             display: inline-block;
-            top: 100px;
+            top: 200px;
             left: 0;
             right: 0;
             font-size: 50px;
@@ -65,27 +88,71 @@
 
         #Projects{
             position: absolute;
-            width: 1800px;
+            width: 2000px;
             height: 2000px;
-            top: 300px;
+            top: 400px;
             left:0;
             right: 0;
             margin: auto;
-            background: #b02a37;
+
         }
+
+        body>section>div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .img{
+            width: 450px;
+            height: 400px;
+        }
+
+        #backImg{
+            width:80px;
+            height: 80px;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+        }
+
 
 
     </style>
 </head>
 <body>
+<header>
+
+</header>
 
 <section >
-    <dt><h1 class="topic"><b>Projects</b></h1></dt>
+    <a href="../index.html"><img id="backImg" src="../assets/images/back.png" alt="backImage"></a>
 
-    <div id="Projects">
+    <dt><h1 class="topic"><b>My Projects</b></h1></dt>
 
+    <div id="Projects" class="glass glassBackground">
+        <figure>
+            <a href="https://github.com/VihangaIndeewara/Super-Meat-Shop.git" target="_blank"> <img  class="img" src="../assets/images/SuperMeatShop.png" alt="SuperMeatShop Interface"></a>
+            <div>
+                <figcaption >Super Meat Shop</figcaption>
+            </div>
+
+        </figure>
+        <figure>
+            <a href="https://github.com/VihangaIndeewara/Super-Market.git" target="_blank"><img class="img" src="../assets/images/SuperMarket.png" alt="SuperMarket Interface"></a>
+            <div>
+                <figcaption>Super Market</figcaption>
+            </div>
+        </figure>
+        <figure>
+            <a href="https://github.com/VihangaIndeewara/Hostel.git" target="_blank"><img class="img" src="../assets/images/Hostel.png" alt="Hostel Interface"></a>
+            <div>
+                <figcaption>Hostel</figcaption>
+            </div>
+        </figure>
     </div>
 
 </section>
+
 </body>
 </html>
