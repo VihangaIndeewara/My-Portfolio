@@ -89,7 +89,7 @@
         #Projects{
             position: absolute;
             width: 2000px;
-            height: 2000px;
+            height: 2100px;
             top: 400px;
             left:0;
             right: 0;
@@ -97,15 +97,34 @@
 
         }
 
-        body>section>div{
+        body>section>div>div{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 200px;
+
 
         }
+        body>section>div>div>figure{
+            height: 800px;
+            width:550px;
+        }
+
+        body>section>div>div>figure>div>figcaption{
+            font-size: 25px;
+        }
+
         .img{
             width: 450px;
             height: 400px;
+            border-radius: 25px;
+
+        }
+
+        .img:hover{
+            width:465px ;
+            height: 415px;
+            box-shadow: 0px 0px 6px 5px dimgray;
         }
 
         #backImg{
@@ -114,6 +133,24 @@
             position: absolute;
             top: 150px;
             left: 50px;
+        }
+
+        #backImg:hover{
+            width:85px ;
+            height: 85px;
+            border-radius: 100%;
+
+        }
+
+        .viewImg{
+            width: 80px;
+            height: 70px;
+        }
+
+        .viewImg:hover{
+            width: 90px;
+            height: 80px;
+
         }
 
 
@@ -131,25 +168,131 @@
     <dt><h1 class="topic"><b>My Projects</b></h1></dt>
 
     <div id="Projects" class="glass glassBackground">
-        <figure>
-            <a href="https://github.com/VihangaIndeewara/Super-Meat-Shop.git" target="_blank"> <img  class="img" src="../assets/images/SuperMeatShop.png" alt="SuperMeatShop Interface"></a>
-            <div>
-                <figcaption >Super Meat Shop</figcaption>
-            </div>
+        <div>
+            <figure>
+                <h1>Vehicle Parking System</h1>
+                <br>
+                <img  class="img" src="../assets/images/VehicleManagement.png" alt="VehicleManagement Interface">
+                <a href="https://github.com/VihangaIndeewara/Vehicle-Parking-System" target="_blank"><img class="viewImg" src="../assets/images/view.png" alt="SuperMarket Interface"></a>
 
-        </figure>
-        <figure>
-            <a href="https://github.com/VihangaIndeewara/Super-Market.git" target="_blank"><img class="img" src="../assets/images/SuperMarket.png" alt="SuperMarket Interface"></a>
-            <div>
-                <figcaption>Super Market</figcaption>
-            </div>
-        </figure>
-        <figure>
-            <a href="https://github.com/VihangaIndeewara/Hostel.git" target="_blank"><img class="img" src="../assets/images/Hostel.png" alt="Hostel Interface"></a>
-            <div>
-                <figcaption>Hostel</figcaption>
-            </div>
-        </figure>
+                <div>
+                    <figcaption >
+                        <br>
+                        <br>
+                        This is my first Standalone Application. I create this project for OOP module coursework.
+                        This project process is manage vehicle parking places.
+                        <br>
+                        <br>
+                        <b>Technologies & Tools :</b>
+                        Java, JavaFX, Intellij IDEA, Scene Builder
+
+                    </figcaption>
+                </div>
+
+            </figure>
+            <figure>
+                <h1>Super Market</h1>
+                <br>
+                <img class="img" src="../assets/images/SuperMarket.png" alt="SuperMarket Interface">
+                <a href="https://github.com/VihangaIndeewara/Super-Market.git" target="_blank"><img class="viewImg" src="../assets/images/view.png" alt="SuperMarket Interface"></a><figure></figure>
+
+                <div>
+                    <figcaption>
+                        <br>
+                        <br>
+                        This is project is a Stand Alone application. It was a layered
+                        architecture course work. This application is being able to
+                        manage items, print bills and get system report.
+                        <br>
+                        <br>
+                        <b>Technologies & Tools :</b>
+                        Java, MySQL, JavaFX, Scene Builder, TIBCO Jaspersoft
+                    </figcaption>
+                </div>
+
+            </figure>
+            <figure>
+                <h1>Super Meat Shop</h1>
+                <br>
+                <img class="img" src="../assets/images/SuperMeatShop.png" alt="SuperMeatShop Interface">
+                <a href=" https://github.com/VihangaIndeewara/Super-Meat-Shop" target="_blank"><img class="viewImg" src="../assets/images/view.png" alt="SuperMarket Interface"></a>
+                <div>
+                    <figcaption>
+                        <br>
+                        <br>
+                        This is my 1st semester final project and it was Stand Alone
+                        Application. This application can manage the details of
+                        meats, customers, employees, order placements, print bills
+                        and get system reports. MVC Architecture use for this project.
+                        <br>
+                        <br>
+                        <b>Technologies & Tools :</b>
+                        Java, MySQL, JavaFX, Scene Builder, TIBCO Jaspersoft
+                    </figcaption>
+                </div>
+            </figure>
+        </div>
+        <div>
+            <figure>
+                <h1>Hostel</h1>
+                <br>
+                <img  class="img" src="../assets/images/Hostel.png" alt="Hostel Interface">
+                <a href="https://github.com/VihangaIndeewara/Hostel" target="_blank"><img class="viewImg" src="../assets/images/view.png" alt="SuperMarket Interface"></a>
+                <div>
+                    <figcaption >
+                        <br>
+                        <br>
+                        This is a Stand Alone Application for Hostel Management System.
+                        This is ORM Concept Module course work
+                        <br>
+                        <br>
+                        <b>Technologies & Tools :</b>
+                        Java, Hibernate, Scene Builder
+                    </figcaption>
+                </div>
+
+            </figure>
+            <figure>
+                <h1>Live Chat Application</h1>
+                <br>
+                <img class="img" src="../assets/images/ChatAPP.png" alt="ChatAPP Interface">
+                <a href="https://github.com/VihangaIndeewara/Live-Chat-Application" target="_blank"><img class="viewImg" src="../assets/images/view.png" alt="SuperMarket Interface"></a>
+                <div>
+                    <figcaption>
+                        <br>
+                        <br>
+                        Socket programing has been used for this application. User
+                        can live chat with friends or group and send emojis, images.
+                        <br>
+                        <br>
+                        <b>Technologies & Tools :</b>
+                        Socket Programming, Java, Scene builder
+                    </figcaption>
+                </div>
+            </figure>
+            <figure>
+                <h1>Easy Car Rental System</h1>
+                <br>
+                <img class="img" src="../assets/images/Easy_Car_Rental.png" alt="Easy_Car_Rental Interface">
+                <a href="https://github.com/VihangaIndeewara/Easy-Car-Rental" target="_blank"><img class="viewImg" src="../assets/images/view.png" alt="SuperMarket Interface"></a>
+                <div>
+                    <figcaption>
+                        <br>
+                        <br>
+
+                        This is 2nd semester final project. Easy Car Rentals is
+                        the web application of Enterprise level car rental
+                        service. This project process roles are admin, customer
+                        and driver.
+                        <br>
+                        <br>
+                        <b>Technologies & Tools :</b>
+                        Java, HTML, CSS, JavaScript, SpringMVC, Hibernate, Bootstrap
+
+                    </figcaption>
+                </div>
+            </figure>
+        </div>
     </div>
 
 </section>
