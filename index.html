@@ -47,22 +47,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cormorant+Garamond:ital,wght@1,600&family=DynaPuff&family=Lato:ital@1&family=Merriweather:ital@1&family=Noto+Sans:wght@500;700&family=Oswald:wght@600&family=PT+Serif&family=Pacifico&family=Ubuntu&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
 
     <style>
 
-        ::-webkit-scrollbar-track {
-            background: #192F35;
-            border-radius: 100vw;
 
+
+        ::-webkit-scrollbar{
+            background: white;
+            border-radius: 100vw;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(rebeccapurple, blue);
+            background: linear-gradient(#BA903A, dimgray);
             border-radius: 100vw;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(blue, rebeccapurple);
+            background: linear-gradient(#BA903A, dimgray);
         }
 
 
@@ -119,32 +123,57 @@
             font-size: 80px;
             top: 200px;
             left: 300px;
-            font-family: 'DynaPuff', cursive;
-            font-family: 'Lato', sans-serif;
-            font-family: 'PT Serif', serif;
-            font-family: 'Ubuntu', sans-serif;
+            color:#231955;
+            font-family: 'Roboto Slab', serif;
+
+            animation-name: first-name-animation;
+            animation-duration: .5s;
+            animation-iteration-count: 3;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: initial;
+            animation-timing-function: linear;
         }
 
-        main > section:first-child > article > h3:nth-child(2) {
+        main > section:first-child > article > h2:nth-child(2) {
             position: absolute;
             display: inline-block;
-            font-size: 60px;
-            top: 320px;
-            left: 0px;
+            font-size: 80px;
+            top: 333px;
+            left: 300px;
+            color:#231955;
+            font-family: 'Roboto Slab', serif;
 
-            font-family: 'DynaPuff', cursive;
-            font-family: 'Lato', sans-serif;
-            font-family: 'Ubuntu', sans-serif;
-            animation-name: name-animation;
+            animation-name: first-name-animation;
             animation-duration: .5s;
-            animation-delay: 1s;
             animation-iteration-count: 3;
-            animation-direction: alternate;
-            animation-fill-mode: both;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: initial;
+            animation-timing-function: linear;
+        }
+
+
+        main > section:first-child > article > h3:nth-child(3) {
+            position: absolute;
+            display: inline-block;
+            font-size: 100px;
+            top: 280px;
+            left: 450px;
+
+            font-family: 'Roboto Slab', serif;
+
+            color : #BA903A;
+
+            animation-name: first-name-animation;
+            animation-duration: .5s;
+
+            animation-iteration-count: 1;
+            animation-direction: alternate-reverse;
+            animation-fill-mode: initial;
             animation-timing-function: linear;
 
         }
-        @keyframes name-animation {
+
+        @keyframes first-name-animation {
             0% {
                 margin-left: 0px;
             }
@@ -154,29 +183,34 @@
         }
 
 
-
-          main > section:first-child > article > h6:nth-child(3) {
+          main > section:first-child > article > h6:nth-child(4) {
             position: absolute;
             display: inline-block;
             font-size: 35px;
-            top: 410px;
+            top: 450px;
             left: 300px;
             font-family: 'DynaPuff', cursive;
             font-family: 'Lato', sans-serif;
             font-family: 'Ubuntu', sans-serif;
-            color: #726969;
+            color: #a8bd12;
             animation-name: my-animation;
-            animation-duration: .2s;
+            animation-duration: .3s;
             animation-iteration-count: infinite;
 
         }
 
         @keyframes my-animation {
-            from{
-                color: #2a3663;
+            0%{
+                color: #a8bd12;
             }
-            to{
-                color: #87736e;
+            50%{
+                color: #1D0C91;
+            }
+            75%{
+                color: #a8bd12;
+            }
+            100%{
+                color: #b32814;
             }
         }
 
@@ -203,7 +237,7 @@
             width: 500px;
             height: 500px;
             top: 220px;
-            left: 1500px;
+            left: 1600px;
         }
 
         main > section:nth-child(2) {
@@ -213,6 +247,8 @@
             top: 45px;
             background: #F0F0F0;
         }
+
+
 
         .topic {
             position: absolute;
@@ -1108,9 +1144,7 @@
             cursor: pointer;
         }
 
-    #myName{
 
-    }
 
 
     </style>
@@ -1133,7 +1167,9 @@
     <section id="Home">
         <article>
             <h2>Hi, there</h2>
-            <h3 id="myName">I'm Vihanga Indeewara</h3>
+            <h2 >I'm </h2>
+            <h3 >Vihanga Indeewara</h3>
+
             <h6 style=color:#8e8c8c>Full Stack Developer</h6>
             <nav>
                 <a href="https://www.linkedin.com/in/vihanga-indeewara-89a497244/" target="_blank"><img src="assets/images/linkedin.png" alt="Linkedin Image"></a>
